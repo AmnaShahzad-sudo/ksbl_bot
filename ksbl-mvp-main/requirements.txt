@@ -1,0 +1,13 @@
+anthropic
+google-generativeai
+numpy
+streamlit
+chromadb
+
+langchain_voyageai
+langchain_community
+
+
+prettytable
+
+pysqlite3-binary

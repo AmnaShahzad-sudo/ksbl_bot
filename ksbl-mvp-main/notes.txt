@@ -1,0 +1,30 @@
+
+TODO:
+
+
+- Can explore the multi query retriever for complex queries
+- Querying vertor store can involve context from multiple messages.
+- Is Parent Document Retriever better?
+- maybe there could be a threshold instead of always using 5 chunks
+- Add a token counter
+- Chunks from FAQ questions shouldn't copy paste the FAQ
+- Split chunks with tags?
+- Build a logging system: Save entire message history, chunks retrieved, etc. Preferably store parameters too
+- Build a system to automatically run different questions and log results
+- Do we want the model to quote sections?
+- Add Gemini RAG
+- Re-structure code
+- Somehow make mode aware that the chunks weren't shared by the user. Will have to see how best to quote chunks in the message
+
+
+- Add calendar to chunk temporarily
+
+- Add copy to clipboard
+- Merge FAQ chunks
+- In email mode, chunks about SSD details are prioritized. Priority to fix this will depend on interest in the mode.
+- It also tells students to contact SSD, which doesn't make sense
+- Probably removing mention of SSD in the email can help. Or just tell SSD not to type the first line and only the content.
+
+Red questions in FAQs have been replaced with please contact student services
+Orange questions vary
+Yellow have been edited a bit in some cases

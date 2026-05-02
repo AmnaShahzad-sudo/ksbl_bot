@@ -1,0 +1,11 @@
+anthropic
+google-genai
+numpy
+streamlit
+chromadb
+
+langchain_voyageai
+langchain_community
+langchain_chroma
+
+prettytable
