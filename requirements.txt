@@ -1,11 +1,11 @@
 anthropic
-google-genai
+google-generativeai
 numpy
 streamlit
 chromadb
-
 langchain_voyageai
 langchain_community
 langchain_chroma
-
 prettytable
+openai
+voyageai
