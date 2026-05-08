@@ -10,6 +10,8 @@ import numpy as np
 import streamlit as st
 import voyageai
 
+st.set_page_config(page_title="KSBLBot", initial_sidebar_state="collapsed")
+
 ADMIN_KEYS = ['adminmodeenable']
 
 if 'admin_mode' not in st.session_state:
