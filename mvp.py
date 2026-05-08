@@ -32,15 +32,17 @@ models = {
     },
 }
 
-st.session_state['model'] = st.sidebar.selectbox(
-    'Choose a model',
-    models.keys(),
-    format_func=lambda x: models[x]['display'],
-    disabled=not st.session_state.admin_mode
-)
+# Hardcoded settings - no sidebar
+st.session_state['model'] = 'openai/gpt-4.1-mini'
+st.session_state['rag'] = True
+st.session_state['reranking'] = True
+st.session_state['detail'] = 'concise'
+st.session_state['email_mode'] = False
+
 
 def get_api_type():
     return models[st.session_state.model]['api']
+
 
 if get_api_type() == 'openrouter':
     openrouter_client = OpenAI(
@@ -48,7 +50,14 @@ if get_api_type() == 'openrouter':
         api_key=st.secrets['OPENROUTER_API_KEY'],
     )
 
-# Display history
+if st.session_state.rag and 'rag_db' not in st.session_state:
+    voyage_embeddings = VoyageAIEmbeddings(
+        voyage_api_key=st.secrets['VOYAGE_API_KEY'], model='voyage-large-2', truncation=False
+    )
+    st.session_state.rag_db = chroma.Chroma(
+        persist_directory='./chroma_db', embedding_function=voyage_embeddings)
+
+# Display chat history
 for message in st.session_state.messages:
     with st.chat_message(message['role']):
         st.markdown(message['content'], help=message.get('tooltip', None))
@@ -59,20 +68,97 @@ if prompt := st.chat_input("Talk to KSBLBot"):
         st.session_state.admin_mode = True
         st.rerun()
 
-    st.session_state.messages.append({'role': 'user', 'content': prompt})
     with st.chat_message('user'):
         st.markdown(prompt)
+    st.session_state.messages.append({'role': 'user', 'content': prompt})
 
     tooltip = None
 
     with st.chat_message('assistant'):
-        if get_api_type() == 'openrouter':
-            or_messages = [{'role': 'system', 'content': system_prompt}]
-            or_messages += [
-                {'role': m['role'], 'content': m['content']}
-                for m in st.session_state.messages
-            ]
 
+        if not st.session_state.email_mode:
+            active_system_prompt = prompts.anthropic_qa_prompt
+        else:
+            active_system_prompt = prompts.anthropic_email_prompt
+
+        active_system_prompt = active_system_prompt.format(
+            detail=st.session_state.detail,
+            date_today=(datetime.now(timezone.utc) + timedelta(hours=5)).strftime("%d %B %Y")
+        )
+
+        if st.session_state.rag:
+            user_content = st.session_state.messages[-1]['content']
+
+            model_content = 'The following sections from the policy document contain relevant information. These sections were shared by the creator of the bot and the user can not read them unless you refer to them in your answer:'
+            docs = st.session_state.rag_db.similarity_search_with_score(user_content, k=20)
+
+            page_contents = []
+            table = prettytable.PrettyTable()
+            table.set_style(prettytable.MARKDOWN)
+            table.field_names = ['Score', 'Chunk']
+            table._max_width = {'Score': 5, 'Chunk': 45}
+
+            total_chunks = faq_chunks = 0
+            for doc, score in docs[:20]:
+                if 'This section is taken from the internal support manual' in doc.page_content:
+                    if faq_chunks < 2:
+                        faq_chunks += 1
+                        total_chunks += 1
+                        page_contents.append(doc.page_content)
+                        table.add_row([f"{score:.3f}", doc.page_content.strip()])
+                elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc.page_content:
+                    continue
+                else:
+                    total_chunks += 1
+                    page_contents.append(doc.page_content)
+                    table.add_row([f"{score:.3f}", doc.page_content.strip()])
+
+                if total_chunks >= 5:
+                    break
+
+            tooltip = table.get_string()
+
+            if st.session_state.reranking:
+                voyageai_client = voyageai.Client(st.secrets['VOYAGE_API_KEY'])
+                docs_to_rerank = [doc.page_content for doc, _ in docs[:20]]
+                rerank_results = voyageai_client.rerank(user_content, docs_to_rerank, 'rerank-lite-1')
+
+                table.clear_rows()
+                page_contents = []
+                total_chunks = faq_chunks = 0
+
+                for result in rerank_results.results:
+                    doc, score = result.document, result.relevance_score
+                    if 'This section is taken from the internal support manual' in doc:
+                        if faq_chunks < 2:
+                            faq_chunks += 1
+                            total_chunks += 1
+                            page_contents.append(doc)
+                            table.add_row([f"{score:.3f}", doc.strip()])
+                    elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc:
+                        continue
+                    else:
+                        total_chunks += 1
+                        page_contents.append(doc)
+                        table.add_row([f"{score:.3f}", doc.strip()])
+
+                    if total_chunks >= 5:
+                        break
+
+                tooltip += '\nAfter reranking:\n' + table.get_string()
+
+            model_content += '\n----------\n'.join(page_contents)
+            model_content += f"\n----------\nThe user's message is as follows: {user_content}"
+            model_content += f"\nPlease provide a {st.session_state.detail} answer. Do not start your answer with 'based on the provided information' or anything similar."
+        else:
+            model_content = prompt
+
+        history = st.session_state.messages[:-1]
+        api_messages = [{'role': m['role'], 'content': m.get('model_content', m['content'])} for m in history]
+        api_messages.append({'role': 'user', 'content': model_content})
+
+        if get_api_type() == 'openrouter':
+            or_messages = [{'role': 'system', 'content': active_system_prompt}] + api_messages
             try:
                 stream = openrouter_client.chat.completions.create(
                     model=st.session_state.model,
@@ -87,11 +173,12 @@ if prompt := st.chat_input("Talk to KSBLBot"):
                     if chunk.choices[0].delta.content
                 )
             except Exception as e:
-                st.error(f"Error with OpenRouter API: {e}")
-                response_text = "There was an issue with generating a response."
-        else:
-            response_text = "Model API type not recognized."
+                st.error(f"Error: {e}")
+                response_text = "There was an issue generating a response."
 
-    st.session_state.messages.append(
-        {'role': 'assistant', 'content': response_text, 'tooltip': tooltip}
-    )
+    st.session_state.messages.append({
+        'role': 'assistant',
+        'content': response_text,
+        'model_content': response_text,
+        'tooltip': tooltip
+    })
