@@ -16,6 +16,19 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 st.title('KSBLBot')
 
+# Remove circular mask for avatar so the full logo can be displayed large
+st.markdown("""
+<style>
+    [data-testid="stChatMessageAvatar"] {
+        border-radius: 0 !important;
+        background-color: transparent !important;
+    }
+    [data-testid="stChatMessageAvatar"] img {
+        border-radius: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # TODO: TEMP HACK
 with open('system-prompt.txt', 'r') as f:
     system_prompt = f.read()
@@ -113,7 +126,7 @@ def initialize_chat():
             # Truncation is set because the default 'None' breaks the api
             # TODO: Should probably be set to true
             voyage_embeddings = VoyageAIEmbeddings(
-                voyage_api_key=st.secrets['VOYAGE_API_KEY'], model='voyage-large-2', truncation=False
+                api_key=st.secrets['VOYAGE_API_KEY'], model='voyage-large-2', truncation=False
             )
             st.session_state.rag_db = chroma.Chroma(
                 persist_directory='./chroma_db', embedding_function=voyage_embeddings)
@@ -136,7 +149,7 @@ def initialize_chat():
 if not st.session_state.get('initialized', False):
     initialize_chat()
 
-with st.chat_message('assistant'):
+with st.chat_message('assistant', avatar="Assets/KSBL_Logo_square.png"):
     # TODO: Maybe replace with email bot text when toggled here. If there is interest in the mode.
     st.write('Hello! I am KSBLBot. How may I help you today?')
 
@@ -144,7 +157,8 @@ with st.chat_message('assistant'):
 for message in st.session_state.messages:
     # TODO: HACK
     if message.get('display', True):
-        with st.chat_message(message['role']):
+        avatar = "Assets/KSBL_Logo_square.png" if message['role'] == 'assistant' else None
+        with st.chat_message(message['role'], avatar=avatar):
             # TODO: Tooltip is a hack
             st.markdown(message['content'], help=message.get('tooltip', None))
 
@@ -162,7 +176,7 @@ if prompt := st.chat_input("Talk to KSBLBot"):
     # TODO: Tooltip is a hack here
     tooltip = None
 
-    with st.chat_message('assistant'):
+    with st.chat_message('assistant', avatar="Assets/KSBL_Logo_square.png"):
         if get_api_type() == 'anthropic':
             if st.session_state.rag:
 
@@ -212,44 +226,48 @@ if prompt := st.chat_input("Talk to KSBLBot"):
 
                     # TODO: Probably re-rank less than 20
                     docs_to_rerank = [
-                        doc.page_content for doc, _ in docs[:20]]
+                        doc.page_content.strip()
+                        for doc, _ in docs[:20]
+                        if doc.page_content and doc.page_content.strip()
+                    ]
 
-                    rerank_results = voyageai_client.rerank(
-                        user_message['content'], docs_to_rerank, 'rerank-lite-1')
+                    if docs_to_rerank:
+                        rerank_results = voyageai_client.rerank(
+                            query=user_message['content'],
+                            documents=docs_to_rerank,
+                            model='rerank-lite-1'
+                        )
 
-                    table.clear_rows()
-                    page_contents = []
+                        table.clear_rows()
+                        page_contents = []
 
-                    # TODO: Code is copy pasted
-                    # TODO: Better filters
-                    # TODO: Do we even need FAQ filtering here?
-                    # TODO: Hack
-                    total_chunks = faq_chunks = 0
-                    for result in rerank_results.results:
-                        doc, score = result.document, result.relevance_score
-                        if 'This section is taken from the internal support manual' in doc:
-                            if faq_chunks < 2:
-                                faq_chunks += 1
+                        # TODO: Code is copy pasted
+                        # TODO: Better filters
+                        # TODO: Do we even need FAQ filtering here?
+                        # TODO: Hack
+                        total_chunks = faq_chunks = 0
+                        for result in rerank_results.results:
+                            doc, score = result.document, result.relevance_score
+                            if 'This section is taken from the internal support manual' in doc:
+                                if faq_chunks < 2:
+                                    faq_chunks += 1
+                                    total_chunks += 1
+                                    page_contents.append(doc)
+                                    table.add_row([f"{score:.3f}", doc.strip()])
+                            # TODO: Temp hack
+                            elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc:
+                                continue
+                            else:
                                 total_chunks += 1
                                 page_contents.append(doc)
-                                table.add_row(
-                                    [f"{score:.3f}", doc.strip()])
-                        # TODO: Temp hack
-                        elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc:
-                            continue
+                                table.add_row([f"{score:.3f}", doc.strip()])
 
-                        else:
-                            total_chunks += 1
-                            page_contents.append(doc)
-                            table.add_row(
-                                [f"{score:.3f}", doc.strip()])
+                            if total_chunks >= 5:
+                                break
 
-                        if total_chunks >= 5:
-                            break
-
-                    # TODO: This After reranking is broken, fix
-                    tooltip += ' \n After reranking:'
-                    tooltip += table.get_string()
+                        # TODO: This After reranking is broken, fix
+                        tooltip += ' \n After reranking:\n'
+                        tooltip += table.get_string()
 
                 # Code block mainly for the monospace for table formatting
                 # tooltip = '```' + table.get_string() + '```'

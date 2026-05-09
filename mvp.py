@@ -22,6 +22,19 @@ if 'messages' not in st.session_state:
 
 st.title('KSBLBot')
 
+# Remove circular mask for avatar so the full logo can be displayed large
+st.markdown("""
+<style>
+    [data-testid="stChatMessageAvatar"] {
+        border-radius: 0 !important;
+        background-color: transparent !important;
+    }
+    [data-testid="stChatMessageAvatar"] img {
+        border-radius: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 with open('system-prompt.txt', 'r', encoding='utf-8') as f:
     system_prompt = f.read()
 
@@ -59,7 +72,8 @@ if st.session_state.rag and 'rag_db' not in st.session_state:
 
 # Display chat history
 for message in st.session_state.messages:
-    with st.chat_message(message['role']):
+    avatar = "Assets/KSBL_Logo_square.png" if message['role'] == 'assistant' else None
+    with st.chat_message(message['role'], avatar=avatar):
         st.markdown(message['content'], help=message.get('tooltip', None))
 
 # Handle new input
@@ -74,7 +88,7 @@ if prompt := st.chat_input("Talk to KSBLBot"):
 
     tooltip = None
 
-    with st.chat_message('assistant'):
+    with st.chat_message('assistant', avatar="Assets/KSBL_Logo_square.png"):
 
         if not st.session_state.email_mode:
             active_system_prompt = prompts.anthropic_qa_prompt
@@ -120,32 +134,34 @@ if prompt := st.chat_input("Talk to KSBLBot"):
 
             if st.session_state.reranking:
                 voyageai_client = voyageai.Client(st.secrets['VOYAGE_API_KEY'])
-                docs_to_rerank = [doc.page_content for doc, _ in docs[:20]]
-                rerank_results = voyageai_client.rerank(user_content, docs_to_rerank, 'rerank-lite-1')
+                docs_to_rerank = [doc.page_content for doc, _ in docs[:20] if doc.page_content.strip()]
+                
+                if docs_to_rerank:
+                    rerank_results = voyageai_client.rerank(user_content, docs_to_rerank, 'rerank-lite-1')
 
-                table.clear_rows()
-                page_contents = []
-                total_chunks = faq_chunks = 0
+                    table.clear_rows()
+                    page_contents = []
+                    total_chunks = faq_chunks = 0
 
-                for result in rerank_results.results:
-                    doc, score = result.document, result.relevance_score
-                    if 'This section is taken from the internal support manual' in doc:
-                        if faq_chunks < 2:
-                            faq_chunks += 1
+                    for result in rerank_results.results:
+                        doc, score = result.document, result.relevance_score
+                        if 'This section is taken from the internal support manual' in doc:
+                            if faq_chunks < 2:
+                                faq_chunks += 1
+                                total_chunks += 1
+                                page_contents.append(doc)
+                                table.add_row([f"{score:.3f}", doc.strip()])
+                        elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc:
+                            continue
+                        else:
                             total_chunks += 1
                             page_contents.append(doc)
                             table.add_row([f"{score:.3f}", doc.strip()])
-                    elif st.session_state.email_mode and 'The Student Services Department (SSD) is the first point of contact' in doc:
-                        continue
-                    else:
-                        total_chunks += 1
-                        page_contents.append(doc)
-                        table.add_row([f"{score:.3f}", doc.strip()])
 
-                    if total_chunks >= 5:
-                        break
+                        if total_chunks >= 5:
+                            break
 
-                tooltip += '\nAfter reranking:\n' + table.get_string()
+                    tooltip += '\nAfter reranking:\n' + table.get_string()
 
             model_content += '\n----------\n'.join(page_contents)
             model_content += f"\n----------\nThe user's message is as follows: {user_content}"
