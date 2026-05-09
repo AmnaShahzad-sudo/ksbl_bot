@@ -82,6 +82,15 @@ if prompt := st.chat_input("Talk to KSBLBot"):
         st.session_state.admin_mode = True
         st.rerun()
 
+    # --- Vulgarity Control ---
+    vulgar_words = [
+        "fuck", "shit", "bitch", "asshole", "cunt", "bastard", "motherfucker", 
+        "dick", "pussy", "slut", "whore", "faggot", "nigger", "crap", "bullshit"
+    ]
+    prompt_lower = prompt.lower()
+    is_vulgar = any(word in prompt_lower for word in vulgar_words)
+    # -------------------------
+
     with st.chat_message('user'):
         st.markdown(prompt)
     st.session_state.messages.append({'role': 'user', 'content': prompt})
@@ -89,6 +98,17 @@ if prompt := st.chat_input("Talk to KSBLBot"):
     tooltip = None
 
     with st.chat_message('assistant', avatar="Assets/KSBL_Logo_square.png"):
+
+        if is_vulgar:
+            response_text = "I kindly request you to maintain respectful and polite language. As representatives of KSBL, we uphold the values of courtesy and Islamic etiquette in all our interactions. JazakAllah Khair."
+            st.markdown(response_text)
+            st.session_state.messages.append({
+                'role': 'assistant',
+                'content': response_text,
+                'model_content': response_text,
+                'tooltip': None
+            })
+            st.stop()
 
         if not st.session_state.email_mode:
             active_system_prompt = prompts.anthropic_qa_prompt
