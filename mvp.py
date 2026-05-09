@@ -132,7 +132,15 @@ if prompt := st.chat_input("Talk to KSBLBot"):
             user_content = st.session_state.messages[-1]['content']
 
             model_content = 'The following sections from the policy document contain relevant information. These sections were shared by the creator of the bot and the user can not read them unless you refer to them in your answer:'
-            docs = st.session_state.rag_db.similarity_search_with_score(user_content, k=20)
+            try:
+                docs = st.session_state.rag_db.similarity_search_with_score(user_content, k=20)
+            except Exception as e:
+                if 'RateLimitError' in str(type(e)):
+                    st.error("VoyageAI Rate Limit Exceeded: Please wait a minute for your API quota to refresh before asking another question.")
+                    st.stop()
+                else:
+                    st.error(f"Error connecting to knowledge base: {e}")
+                    st.stop()
 
             page_contents = []
             table = prettytable.PrettyTable()
