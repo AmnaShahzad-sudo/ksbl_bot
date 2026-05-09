@@ -4,6 +4,26 @@ import shutil
 from langchain_chroma import Chroma
 from langchain_voyageai import VoyageAIEmbeddings
 from langchain_core.documents import Document
+from github import Github
+
+def sync_to_github(filepath, content, commit_message, delete=False):
+    try:
+        if 'STREAMLIT_BOT' not in st.secrets:
+            return
+        g = Github(st.secrets['STREAMLIT_BOT'])
+        repo = g.get_repo("AmnaShahzad-sudo/ksbl_bot")
+        git_path = filepath.replace("\\", "/")
+        try:
+            contents = repo.get_contents(git_path)
+            if delete:
+                repo.delete_file(contents.path, commit_message, contents.sha)
+            else:
+                repo.update_file(contents.path, commit_message, content, contents.sha)
+        except Exception:
+            if not delete:
+                repo.create_file(git_path, commit_message, content)
+    except Exception as e:
+        st.warning(f"Failed to sync to GitHub: {e}")
 
 st.set_page_config(page_title="KSBLBot Admin", layout="wide")
 
@@ -85,7 +105,8 @@ with tab1:
                 else:
                     with open(fpath, "w") as f:
                         f.write("")
-                    st.success(f"Created {fname}!")
+                    sync_to_github(fpath, "", f"Create {fname} via Admin Panel")
+                    st.success(f"Created {fname} and synced to GitHub!")
                     st.rerun()
 
     with col2:
@@ -112,14 +133,16 @@ with tab1:
                 if st.button("💾 Save Changes", type="primary"):
                     with open(fpath, "w", encoding="utf-8") as f:
                         f.write(new_content)
-                    st.success("Saved!")
+                    sync_to_github(fpath, new_content, f"Update {edit_file} via Admin Panel")
+                    st.success("Saved and synced to GitHub!")
 
             with col_del:
                 if not is_fixed:
                     if st.button("🗑️ Delete File", type="secondary"):
                         os.remove(fpath)
+                        sync_to_github(fpath, "", f"Delete {edit_file} via Admin Panel", delete=True)
                         st.session_state.selected_file = None
-                        st.success("Deleted!")
+                        st.success("Deleted and removed from GitHub!")
                         st.rerun()
         else:
             st.info("Select a file from the left to edit it, or create a new one.")

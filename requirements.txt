@@ -10,3 +10,4 @@ prettytable
 openai
 voyageai
 langchain
+PyGithub
