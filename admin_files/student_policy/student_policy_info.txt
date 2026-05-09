@@ -1,0 +1,1 @@
+This file contains information regarding student policies and guidelines. You can edit this text in the Admin Panel or locally.
