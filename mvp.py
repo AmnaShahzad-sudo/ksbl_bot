@@ -10,7 +10,7 @@ import numpy as np
 import streamlit as st
 import voyageai
 
-st.set_page_config(page_title="KSBLBot", initial_sidebar_state="collapsed" if not st.query_params.get("admin") else "expanded")
+st.set_page_config(page_title="KSBLBot", initial_sidebar_state="auto")
 
 ADMIN_KEYS = ['adminmodeenable']
 
