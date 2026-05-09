@@ -1,1 +1,197 @@
-This file contains information regarding the various academic programs. You can edit this text in the Admin Panel or locally.
+3. THE PROGRAMS
+At KSBL, we offer the following degree programs:
+1. Master of Business Administration (MBA)
+2. Executive Master of Business Administration (EMBA)
+3. MS in Business Analytics (MSBA)
+4. BS in Management & Entrepreneurship (BS M&E))
+5. BS in Information Technology & Systems (BS IT&S)
+6. BS in Accounting & Finance (BS A&F)
+7. BS in Computer Science (BSCS)
+----------
+MASTER OF BUSINESS ADMINISTRATION
+MBA, our flagship program, prepares students and professionals to adapt, challenge themselves and shape their future. The program enhances management and leadership skills for a dynamic global environment driven by innovation. KSBL MBA connects students to C-suite executives and accomplished practitioners while they learn from leading faculty. This industry-focused, casebased pedagogy gives lifelong perspectives on how organizations can convert challenges into opportunities
+
+With flexibility of class schedules, our MBA program provides a stimulating and transformational educational experience to students and professionals with diverse backgrounds. The Program is based on cutting-edge teaching methodologies and a hands-on approach to learning. All this has led to our MBA graduates going places with a multitude of career possibilities, be it in big corporations, local businesses, or the gig economy.
+The program is 30 credit hours for students with 16-year business education and 60 credit hours for others. Specializations are offered in FINTECH, Digital Marketing, Talent Management, Supply Chain, Information Management and General Management.
+----------
+EXECUTIVE MASTER OF BUSINESS ADMINISTRATION
+Executive MBA (EMBA) at KSBL is an opportunity for experienced professionals and entrepreneurs to prepare for future leadership roles. KSBL EMBA is designed to enhance functional expertise, sound management capabilities, and decision-making skills. Our program allows professionals to acquire advanced business education while pursuing their careers. Having innovation and futurism at its core, the program enables you to perform optimally and lead crosscultural and interdepartmental teams.
+
+KSBL EMBA program is designed for professionals and entrepreneurs having more than three (3) years of experience. The program offers a stimulating learning environment where experienced professionals with diverse backgrounds exchange ideas and solve complex problems of a fastchanging world. Among others, KSBL EMBA program is distinct because of its simulation-based pedagogy, unique networking opportunities and interactions with C-suite executives.
+
+The program is 30 credit hours for students with 16-year business education and 60 credit hours for others. Specializations are offered in FINTECH, Digital Marketing, Talent Management, Supply Chain, Information Management and General Management.
+----------
+BS IN MANAGEMENT & ENTREPRENEURSHIP
+BS in Management & Entrepreneurship (M&E) is designed with two most important factors in view – your career and professional grooming. The 4-year program trains you holistically on the concepts of management and prepares you to launch your career in a global environment. And because of focus on ethics, sustainability, and technology, you can explore opportunities and trends in a more effective manner. The deep understanding of core business competencies and the creative pedagogy that instills critical thinking and a wider world view enables you to seamlessly blend into the workforce.
+
+BS-M&E gives you the comprehensive undergraduate training, so you develop an entrepreneurial mindset that is driven by the latest in management and business studies. After completing this program, you will see yourself involved with new ventures, seeking new opportunities – be it large organizations or start-ups in a rapidly evolving gig economy.
+
+Specializations are offered in Marketing, Finance, and Human Resource Management.
+----------
+BS IN INFORMATION TECHNOLOGY & SYSTEMS
+BS IT&S offers 4-years rigorous training to develop technical expertise and mindset of delivering IT as a service so the organization and its employees can respond to changing business environments. Our BS degree in IT and Systems not only prepares students to understand the business problems behind software design, but it also equips them with the aptitude to develop innovative ways to manage data. The program will enable young minds to understand information systems holistically and how it incorporates the technology, people and processes involved with information.
+----------
+BS IN ACCOUNTING & FINANCE
+BS Accounting and Finance program is a 120-credit hours 4-year degree program that will enable students to gain the requisite skillset in accounting and finance areas and also potentially gain exemptions from professional bodies' examinations. This professionally oriented qualification, by combining cutting-edge theory with real-world practice, will enable students to think critically, analyse and interpret real life business issues in order to devise solutions and will help them to prepare for a career in accountancy, financial services, or management.
+----------
+BS IN COMPUTER SCIENCE
+
+As a Business-centric degree, the KSBL Computer Science program is unique. Housed in the faculty of Management Sciences, our curriculum not only provides the real foundation for tomorrow's technopreneurs today but also ensure that you are head and shoulders above the rest.
+
+The Computer Science program provides a blend of computer science and business education specifically designed to train students in technical skills and commercial awareness. The degree offers hands-on lab courses, in addition to courses that focus on teaching business strategy and innovation tactics. Furthermore, the curriculum places a strong emphasis on developing students' analytical abilities and business insight to prepare them for future careers.
+
+Although computer science and business may appear to be two distinct subjects of study, combining them together can open new opportunities. To increase success in the field of computer science and enable students to be future technopreneurs, business and computer science are combined. It integrates the commercial side of computing with systems and software IT, giving students the tools, they need to advance their careers in computer science.
+----------
+CAPSTONE PROJECTS
+Both graduate and undergraduate program students must complete a Capstone Project as a part of their degree program. Each student must form a group with his/her peers. Maximum group size is 4. Each group will be assigned a Project Advisor who will provide the necessary guidelines to the group members. The scope of the Capstone Project shall be determined under supervision of the Project Advisor.
+
+Each project group shall develop a Project Proposal during the second last semester, which shall be reviewed and approved by the Project Advisor and Project Coordinator jointly (each Teaching Department has a declared Project Coordinator). All members of the project group must meet with the Project Advisor at least fortnightly.
+
+At the culmination of the project, students will be required to submit a report which shall be an original work not plagiarized from any source. Please make sure that you follow the highest ethical research standards in your research.
+----------
+ASSESSMENT SCHEME
+
+Each course is graded out of 100 marks. This, normally, includes a mid-term assessment called mid-term examination and a terminal assessment called final examination. Both these assessments are held in dedicated weeks called examination weeks mentioned in the academic calendar. Schedule for all such examinations is announced by the Examination Department. Some courses replace the mid-term and/or final examinations with other assessments like presentation and projects etc. The course's teacher will inform you about the assessment scheme for each
+course.
+
+Additionally, throughout the semester, assessment like assignments, quizzes, projects, presentations, simulations, management games, case discussions, class participation etc. are conducted. Each faculty member assigns individual assessment weight to each assessment in his/her course. Make sure that you know what each assessment is worth out of 100 marks.
+----------
+GRADING SCHEME
+Passing marks for each undergraduate course are fifty percent and for each graduate course are sixty percent. All courses with ten or less students are graded on a fixed scale given below:
+
+FOR GRADUATE PROGRAMS:
+Grade | Marks | GPA
+A+ | 91 and above | 4.00
+A | 86 - 90 | 4 .00
+A- | 81 - 85 | 3.66
+B+ | 76 - 80 | 3.33
+B | 71 - 75 | 3.00
+B- | 67 - 70 | 2.66
+C+ | 63 - 66 | 2.33
+C | 60 - 62 | 2.00
+F | Below 60 | 0.00
+
+FOR UNDERGRADUATE PROGRAMS:
+Grade | Marks | GPA
+A+ | 91 and above | 4.00
+A | 86 - 90 | 4 .00
+A- | 81 - 85 | 3.66
+B+ | 76 - 80 | 3.33
+B | 71 - 75 | 3.00
+B- | 67 - 70 | 2.66
+C+ | 63 - 66 | 2.33
+C | 60 - 62 | 2.00
+C- | 56 - 59 | 1.66
+D+ | 53 - 55 | 1.33
+D | 50 - 52 | 1.00
+F | Below 50 | 0.00
+
+All results are finalized by a Grading Committee under the supervision of the Dean.
+----------
+MIGRATION / TRANSFER OF CREDITS
+Migration of the students from other HEIs to KSBL in all kinds of Academic Programs shall be on the following grounds:
+1. Student is coming from a program offered by an HEC recognized Higher Education Institution.
+2. Student has not finished the degree that he/she is request the transfer of credit from.
+3. The CGPA of the student in the degree was at least 2.50.
+4. The credits transferred shall not be counted in calculating the CGPA of the student.
+5. Students with transferred credits shall not be eligible for the award of medals.
+
+Transfer of credits is made on a case-to-case basis by the Admissions Committee.
+----------
+PREREQUISITES COURSE
+The pre-requisite course requirement is strictly be followed: students are required to ensure to clear pre-requisite courses for the registration of advance course registration.
+----------
+7. TEACHING METHODOLOGY
+KSBL has a mixed pedagogy including case study method, interactive lectures, simulations, leadership and entrepreneurship projects and experiential learning. This mixed pedagogy approach will help students learn and deploy skills on their projects and will help them think and act like managers and leaders. This teaching methodology will also enable students to achieve a high level of competence in functional areas of business including finance, accounting, marketing, management, strategy, operations, and others. Leadership and entrepreneurship projects are intended to be led by students to encourage a proactive and self-driven approach, and to start the process of team building and collaborative learning that will be present throughout the programs.
+
+Experiential learning is a great opportunity for students to apply and practice their academic understanding, learning and classroom skills to the outside world. Students will get a chance to turn a class project into a real-life experience. Through this practical approach to learning, students will enrich classroom learning by bringing in their practical experience. Students will gain confidence in their own abilities and discover innovative ways to overcome obstacles and challenges, which will not only help them to grow in their professional life, but also add value to the organization. The programs will enhance students' abilities to lead and manage organizations as well as their own businesses.
+
+Programs require rigorous preparation for each class session. Hence, all students are required to read and prepare the recommended reading material before each class.
+----------
+COURSE AND TEACHER EVALUATION
+At KSBL, we believe that student feedback and suggestions are extremely vital for the improvement of the quality of courses and the programs. The performance of the course instructor and course is monitored through anonymous feedback provided by students in the form of final evaluations. The first evaluation is to be conducted in the 7th session (before the mid-term assessment). The second evaluation is to be conducted in the 14th session (before the final assessment).
+----------
+The following document is KSBL's Student Advisement, Personal Counseling, and Assistance Policy
+
+1
+Student Advisement, Personal Counseling, and Assistance Policy
+1. POLICY
+
+It is the policy of KSBL to provide holistic and integrated advisement and counseling to the students on the secretarial aspects of the programs they are enrolled in, their educational and academic progression, and personal wellness.
+----------
+=====================================================
+
+
+The following document is KSBL's Academic Calendar for 2024.
+
+KARACHI SCHOOL OF BUSINESS AND LEADERSHIP		
+ACADEMIC CALENDAR 2023-24		
+BS M&E, IT&S, A&F, CS, EMBA, MBA and MSBA Programs		
+SPRING 2024 SEMESTER (Monday, February 26, 2024)		
+		
+Activity	| Day & Date	| Remarks
+Orientation for Spring 2024 batch	| Saturday, February 23, 2024	
+Course registration  starting and closing dates	| Thursday, February 15 to Thursday, February 22, 2024	
+Conferences  & Seminars (Simerge)	| March 1, 2, 3, 2024	
+Classes Commencement	| Monday, February 26, 2024	
+Career Connect	| Wednesday, February 28, 2024	| The exact date to be announced by the Career Services dept later.
+Eminent Speaker Series	| March 2024	| The exact date to be announced by the Career Services dept later.
+Student Extracurricular Events	| Clubs and Society based time lines	| The exact date to be announced by the Career Services dept later.
+Last Date for Course Add/Drop	| Sunday, March 10, 2024	
+Last Date for Semester Freeze without fee	| Sunday, March 10, 2024	
+Pakistan Day^	| Saturday, March 23, 2024	| Public Holiday
+Death Anniversary of Zulfikar Ali Bhutto*	| Thursday, April 04, 2024	| Subject to the Sindh Govt Announcement
+Faculty and Course Evaluation	| Monday, April 08 to Sunday, April 14, 2024	
+Eid-ul-Fitr** (1st Shawal)	| Thursday, April 11 to Saturday, April 13, 2024	| Subject to the moon sighting
+Last Date for Course Withdrawal	| Sunday, April 14, 2024	
+Last Date for Semester Freeze with course(s) fee and "W" grade	| Sunday, April 14, 2024	
+Mid-term Assessment  Week	| Monday, April 22 to Sunday, April 28, 2024	
+Classes Resumption	| Monday, April 29, 2024	
+Labor Day^	| Wednesday,  May 01, 2024	Public Holiday
+Sessional Marks Submission/Display	| Thursday, June 13, 2024	
+Faculty and Course Evaluation	| Monday, June 10 to Sunday, June 16, 2024	
+Eid-ul-Azha**	| Monday, June 17 to Wednesday,  June 19, 2024	| Subject to the moon sighting;
+Final Assessment  Week	| Saturday, June 22 to Friday, July 05, 2024	
+"""I"" Grade application"	| Application  must be submitted  to the Student Services no later than 3 days of the first sitting of the final assessment.	
+Result Declaration	| Sunday, July 14, 2024
+----------
+When do the classes commence?
+
+
+Ans. For Fall semester, classes commence in September. For Spring semester, classes commence in February.
+----------
+What is the duration of a semester?
+
+
+Ans. The duration of a semester is 16 – 18 weeks.
+----------
+What are class timings?
+Undergraduate Program:
+Classes will be held on campus from Monday thru Friday,  between 9 am and 6 pm.
+Graduate Program:
+- For MBA and MSBA: Classes will be held on campus throughout the week. On weekdays, classes will be conducted in the evening hours in between 7 pm and 10 pm and on weekends, classes will be conducted in the morning, afternoon, and evening slots.
+- For EMBA: Classes will be conducted online throughout the week. On weekdays, classes will be conducted in the evening hours in between 7 pm and 10 pm and on weekends, classes will be conducted in the morning, afternoon, and evening slots.
+----------
+What is the equivalence of 30 credit hour MBA in terms of number of years of education?
+Executive MBA 30 credit hours is equal to 2 years of education, and with the undergraduate degree, a toal of 18 years of education.
+----------
+What Specializations are offered in the MBA Programs?
+KSBL's MBA program provides business fundamentals, entrepreneurial skills, and critical leadership development leading to specializations in the following areas while the General Management MBA option is also available.
+- Digital Marketing
+- Fintech
+- Human Resource
+----------
+What is the eligibility difference between a 30-credit hour MBA/Exec MBA and a 60-credit hour MBA/ Exec MBA?
+
+A 30-credit hour program is for those with 16 years of education in business and relevant areas (CA, ACCA, CFA) while the 60-credit hour program is for those with 16 years of education in any other disciplines (such as Medicine, Law, Engineering, etc)
+----------
+Is it mandatory to have pre-engineering background to apply for BS Computer Science?
+No it is not mandatory, anyone from a non-pre-engineering background can also apply but will have to take two non-credit foundation courses.
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "This is to inform the student service representative that I, due to some personal reasons, was not able to complete my 1st semester. 
+I would like to continue my university and would complete my first semester on fall 2024."
+
+Answer: "Thank you for showing concern.
+You can be enrolled in the 2nd-semester courses in which there is no prerequisite course while courses have prerequisites that are not cleared yet, registration may not be done, therefore, subject to the offerings of the courses, the students are required to clear first the prerequisite courses subject. "

@@ -1,1 +1,648 @@
-This file contains information regarding student policies and guidelines. You can edit this text in the Admin Panel or locally.
+The following document is the official student handbook published by KSBL.
+
+2022-2023
+STUDENT HANDBOOK
+1
+RECTOR'S MESSAGE
+These evolving times are all about a holistic, digital, and global outlook while making ethics and character the bedrock for sustainability. Whether you are a student gearing up for the gig economy, a socially conscious start-up, or a corporate giant, all feed into one global system enabled by technology and continuous learning. At KSBL, we are geared to become an agile ecosystem set to forge lifelong partnerships with all our stakeholders and create global impact, all for the benefit of current and future generations.
+Welcome to KSBL.
+Dr. Ahmad Junaid
+----------
+2
+TABLE OF CONTENTS
+1. SCOPE
+This Student Handbook introduces you to the procedures and codes of conduct for students at KSBL. This Student Handbook Is here to help you, so keep it safe, refer to it, and let it guide you throughout the program that you are enrolled in. This document is updated periodically, so be sure to check it from time to time.
+----------
+REGISTRATION
+Each student must register in courses that he/she wishes to study before the start of each semester. Admissions Department automatically registers all new admissions to the first semester courses. However, you must register for subsequent courses once the first semester is over. Registration is done by submitting a form to the Student Services Department and on payment of the prescribed fee.
+
+Students must register in a minimum number of courses in a semester to remain a bona fide student of KSBL. Similarly, there is a maximum limit to the number of courses a student may register in a semester. The table below will provide further guidance:
+Program | Minimum Credit Hours to be Registered | Maximum Credit Hours to be Registered
+BS (all programs) | 12 | 18
+MBA / EMBA (30 Cr. Hrs) | 09 | 12
+MBA / EMBA (60 Cr. Hrs) | 09 | 15
+MS | 09 | 12
+
+
+Students of the last two semester may request registration in additional credit hours if (1) their CGPA is 3.5 and (2) they need the additional courses to graduate on time.
+
+Students may add a course or drop from it within the first two weeks of a semester. Any course dropped within two weeks does not appear on the transcript. After the second week, a student may choose to withdraw from a course. Withdrawal means that you do not wish to attempt the course and wish that it does not count in your GPA / CGPA calculation. In case of withdrawal, the W grade shall be recorded on the transcript and no fee shall be refunded. A student may withdraw from a course till the end of the seventh week of classes. Courses cannot be withdrawn once the eight week begins. If the course is dropped after the seventh week of the semester, no fee shall be refunded / adjusted in the subsequent semester and reflected with F grade on the Transcript.
+----------
+REPEATING COURSES
+A student must repeat a course if he/she has failed in the previous attempt. Moreover, a student may choose to repeat a course to improve their grades. Undergraduate students may repeat up to five already passed courses. Similarly, graduate students may repeat up to three already passed courses. All such attempts will be recorded in the transcript but the attempt with the highest grade will be used for GPA / CGPA calculation.
+----------
+FREEZING A SEMESTER
+If a student needs to take a break from the program for personal or professional reasons, he/she student may “freeze” a semester by submitting a written application to the Student Services Department. Such applications may be submitted till the end of the seventh week but no later. If application is submitted before the commencement of a semester, the student will not be required to submit any fee. However, if such an application is submitted after a semester has started but before the beginning of the third week, the fee due/paid will be adjusted against the following semester. No fee will be adjusted if the semester is frozen after two weeks of the commencement of the semester.
+
+Students may freeze more than one semester but shall be mindful of the maximum degree duration allowed.
+----------
+MAXIMUM DEGREE DURATION
+All undergraduate degrees must be completed in six years of the commencement of first semester. All graduate degrees must be completed in three years of the start of the first semester.
+----------
+UNREGISTERED STUDENTS
+Enrollment of students who neither register themselves in a semester nor apply for freezing a semester will be considered as suspended. Such students shall apply for removal of enrollment suspension to the Dean in writing before resuming the program.
+----------
+ATTENDANCE
+The students' academic success, achievements and class attendance are closely intertwined. Therefore, students are required to attend all classes. Attendance is marked at the start of each session. Students must maintain 75% attendance to be eligible for being considered for appearing in the Final Assessment.
+
+Further, in case of an ambiguity, student can request for his/her attendance in 48 hours after the held session at studentservices@ksbl.edu.pk by keeping in loop to the concerned faculty and TA. The student will be responded in next 24 hours, after that any correspondence for the adjustment of attendance will not be entertained.
+The absence allowance is to accommodate personal / family / official engagements, travel etc.
+
+The absence allowance is to accommodate personal / family / official engagements, travel etc.
+
+Leave may be granted In case the student attendance is short due to the death in family and/or medical reason, the student will require to apply in writing at studentservices@ksbl.edu.pk along with the evidences as mentioned below, so, the request will be subject to the approval by the Competent Authority.
+
+Case | Required Documents
+Death in Family | Death Certificate
+Illness/Medical Reason | Medical Proofs e.g., Doctor's prescription, certificate, and reports.
+
+EXCEPTIONAL LEAVE REQUEST
+The one-day attendance waiver has been set for Diwali, Holi, and Christmas etc. A maximum of 40% leverage including 25% allowance has been set for Hajj. The student will require to officially submit request in writing at studentservices@ksbl.edu.pk for the concerned religious event.
+----------
+INTERNSHIP
+A credited Internship of 06 weeks minimum shall be mandatory for all BS programs and a noncredit Internship is mandatory for the MBA program on completion of at least the 6th and 2nd semester, respectively. Degree shall not be awarded unless the Internship is completed in the manner provided under the KSBL Career Services Manual.
+----------
+EXAMINATION GUIDELINES
+The Examinations Department would announce the schedules for mid-term and final assessments. The final examinations are an integral part of the degree program and are held at the end of each semester. Depending upon the course requirement and structure, there may be an alternative final exam (e.g., take home examination, term project, lab exam) or any other assessment method specified by the instructor in the course outline.
+The course instructor determines the duration for each exam. Students are required to comply with all the instructions announced by the invigilator or instructor before the start of the exam. Any violation of the instructions issued by the instructor or invigilation staff will be reported immediately, which may result in the cancellation of the student(s) exam and disciplinary action might be taken against those who are found in violation of the instructions.
+
+General examination guidelines are as follows:
+1. Please bring your student ID card and original CNIC to the examination.
+2. Please make sure you log in with your own LMS credentials and you must remember your log in user ID and password.
+3. The taskbar on the laptop should always be visible.
+4. You must be seated according to the Seating Plan.
+5. Please reach the examination hall 15 minutes before the examination starts. 
+6. You must bring a laptop with a charger for the examination for LMS-based assessments.
+7. Software Environment:
+    a) Ensure that no VPN is enabled during the examination. If a VPN extension has been added to your browser, it must be disabled before the exam starts.
+    b) Microsoft Office 2013 or above should be installed & activated Also Operating System “windows/MacOS” should be updated & activated.
+    c) You should have admin rights for the laptop use.
+    d) Keep up-to-date Chrome, Firefox, or Microsoft Edge web browsers on your laptop.
+8. Please ensure your Wi-Fi works before the examination starts. IT Staff will be available for any assistance.
+9. No student will be allowed to enter the examination hall once the paper has started.
+10. Please close all computer files and browser tabs other than the one used for signing in to LMS, Invigilators will periodically check your laptop as part of the examination protocol.
+11. You will ensure only those materials of computer files are open during the exam that has been expressly allowed by the examination instructions
+12. You must switch your mobile phones, wifi devices and blue tooth/ air drop OFF for all papers and put them in your bags or face down in the designated area identified by the invigilator. 
+13. No student shall be allowed to use the lavatory during the first hour of the assessment.
+14. All bags, books, written materials, calculators, USB, and other devices shall be left at the front of the room, and any valuables in the bags shall be at the student's own risk.
+15. If you do not wish to attempt a certain question, please write “Nil” or “No answer” in the space provided.
+16. No change in the text will be possible once you have clicked on “END MY EXAM.” So, you should click “END MY EXAM” only when you have finalized all your answers.
+17. You will not be allowed to leave the examination hall for water breaks. Water dispensers will remain installed in the examination halls.
+18. One student shall be allowed at a time to go to the toilet. No student shall be allowed a toilet break for more than 10 minutes.
+19. You should frequently save your work when attempting questions requiring descriptive answers. In case the internet connectivity is lost, the saved work will be available once connectivity resumes. Refresh the page when the internet reconnects to find your saved work.
+20. You must write directly into the space provided to answer a question. The LMS does not support copy-pasting the text.
+21. Within grace time in last 10 minutes, you must upload your answer files and please recheck your uploaded file, any queries received after exam will not be entertained.
+22. Laptop brightness must be at least 70% in addition to this laptop theme should not be black.
+23. Attempting the paper by opening and signing in to LMS in private mode is advisable. For example, Google Chrome has “Incognito mode,” and Mozilla Firefox has "Private Window" options. It would help avoid conflicts between the LMS environment and the browser plugin.
+24. Before leaving the examination hall, you must get confirmation of examination submission from the invigilator.
+25. Students short of attendance or with outstanding dues will not be allowed to appear in the examination.
+26. Please don't convert your Word Answer copy to pdf and please fill the top sheet properly.
+27. You will not be allowed to re-enter the examination hall once you have concluded the examination and left the room.
+28. There is zero tolerance for the use of unfair means in the examination, including:
+    a. Talking/whispering with others and responding positively to others' whispers.
+    b. Glancing at others' work and responding positively to others in seeing their own work.
+    c. Written material found on or around the desktop.
+    d. Writing on the desk before the start of the exam.
+    e. Carrying helpful material written on the body parts.
+    f. Using/possessing unauthorized dictionary, calculator, tablet, mobile phone, or other materials or device or means of special assistance.
+    g. Using AI-based tools like ChatGPT, DAL-E, and Bing to prepare answers.
+    h. Copying from other students.
+    i. Exchanging answer sheets or computer files/codes during the examination.
+    j. Replacing the answer sheet/equivalent during the exam with the one prepared at home.
+    k. Offering bribes or posing threats to obtain an undeserving unfair advantage in the examination.
+    l. Refusing to obey the invigilators and being argumentative, rude, abusive, aggressive, etc., with them when checked.
+    m. Possessing any weapon in or around the examination center.
+    n. Arranging or committing impersonation in the examination.
+29. The Academic Integrity Committee has levied strict punishments for the use of unfair means, including cancellation of papers and awarding ‘F.'
+30. In case of any queries, please email at examination@ksbl.edu.pk
+----------
+MISSED EXAMINATIONS
+Examinations dates are shared in the academic calendar released each academic year. Students are advised to plan their personal events accordingly and make sure that they appear in the examinations. In case of genuine issues like illness precluding appearance in the examination, official engagement for working students, or family bereavement; a request for make-up examination may be made to the Examinations Department. Students will be required to submit all necessary evidence to support their case.
+
+Each request for a make-up examination is individually assessed by the Head of the Teaching Department / Program. Only those students whose requests for make-up examination have been approved will be allowed to appear in a make-up examination.
+----------
+MINIMUM CGPA REQUIRED TO GRADUATE
+Graduate Programs | 2.50
+Undergraduate Programs|  2.00
+STUDENT PROGRESSION
+In any semester, a student shall be placed on probation for failing to maintain the minimum CGPA (GPA if it is the first semester) required shall be dropped from the program on failing to achieve the minima in the following semester.
+In case a student secures less than the minimum qualifying CGPA at the end of the final semester, he/she shall be allowed to repeat the courses subject to maintain maximum duration of program.
+----------
+HONORS AND AWARDS
+A student shall be eligible for an Academic Honor & Award if he/she:
+a. Has scored a minimum of 3.5 CGPA.
+b. Does not have any repeat exam, credit transfer, or summer session course to his/her credit.
+c. Does not have C or below grade in any course throughout the program.
+d. Has completed the program within the regular program duration, as defined in these Rules.
+e. Has taken full semester load prescribed for any semester for the entire degree program without having withdrawn or repeated any course.
+f. Has never been penalized in any disciplinary case at the Institute.
+Conditions for Medals
+• Subject to the above. the top three graduates with the highest CGPA shall be awarded gold, silver, and bronze medals.
+• Gold, Silver, and Bronze Medals shall be awarded to the students who achieve First, Second, and Third highest CGPA.
+----------
+UNDESIRED CONDUCT
+Students are required to adhere to the highest moral and ethical values. They are expected to behave as law abiding citizens who exhibit positivity and a can-do attitude. They are expected to follow all Pakistan's law, KSBL policies, and universally accepted standards of good conduct.
+The following behaviors are deemed as undesirable and are prohibited:
+
+1. Sexual harassment: It includes engaging in or threatening to engage in any other nonconsensual conduct of a sexual nature concerning another member of the KSBL. It also includes indecent and obscene gestures or mocking behaviors.
+2. Stalking: A course of conduct involving more than one instance of unwanted attention, physical or verbal contact, or any other course of conduct directed at an individual that could be reasonably regarded as likely to alarm that individual or place them in fear of harm or injury, including physical, emotional, or psychological harm. Social media stalking is also included in this.
+3. Bullying & Threatening Behavior: It involves systematic, intentional behavior that threatens, intimidates, or is intended to threaten or intimidate others, abusive language, derogatory remarks, or insults, swearing, shouting or use of unsuitable language, written acts, which are hostile or offensive that target at an individual and create an intimidating or threatening environment or a risk of psychological or physical harm. Bullying or threatening on the social media is also included.
+4. Causing Physical Harm to a Person: Includes any conduct that causes physical injury to another person's or health or safety including, but not limited to physical violence, assault, use of fireworks, gunpowder, dangerous chemicals, or explosive materials; and blocking or preventing the use of or access to fire exit doors and building hallways, etc.
+5. Disruptive Behavior: Engaging in behavior that disrupts or interferes with the learning experience, including talking in class while the faculty member or other students are speaking, creating distractions or disturbances, reading unrelated materials, using cell phones or other electronic devices that disrupt the learning process. This includes both physical and online behaviors.
+6. Theft: Taking unauthorized possession of an item not belonging to you or using it in an unauthorized manner.
+7. Unauthorized Recording/Filming/Photography: refrain from invading privacy of fellow students, KSBL employees, and other on Campus by video recording, sound recording, and photography without explicit permission from the one concerned.
+8. Gambling: Gambling for money/other valuables/any other benefit on results card games and/or other indoor/outdoor activities is prohibited in Campus and with people related to KSBL.
+9. Distribution of Unauthorized Material: Do not distribute any material in Campus and/or to your classmates/teachers/others connected with KSBL that can entice violence/ disorder. Material about KSBL that has not been authorized by KSBL Management for distribution to general public must also not be distributed.
+10. Obscene Material: You may not possess or access any obscene material in video/audio/animated form using any media of communication whatsoever.
+11. Forming Gangs: A gang may involve individuals with identifiable leadership that conspires and acts in concert, mainly for criminal purposes. Involvement in gang-related activities may include displaying gang symbols, gang paraphernalia, colors, signs, or graffiti. This includes activities both in Campus and online.
+12. Rioting: It involves engaging in, or inciting others to engage in, harmful or destructive behavior in the context of an assembly of persons disturbing the peace. Rioting includes, but is not limited to, such conduct as using or threatening violence to others, damaging or destroying property, impeding or impairing fire or other emergency services, or refusing the direction of authorized personnel.
+13. Demonstrations: It includes mass assemblies or demonstrations that disrupt the classroom experience, work environment, or others' movement. This includes social media unauthorized social media campaigns as well.
+14. Illegal or Unauthorized Use of Alcohol or Drugs: It includes the unauthorized use, possession, manufacturing, or distribution of illicit drugs, controlled substances, narcotics, or alcoholic beverages or being under the unauthorized influence of the same on Campus.
+15. Possession of Weapons: Students are not allowed to bring any weapon to the Campus.
+16. Damage to KSBL Property: It includes intentionally defacing, destroying, damaging, or littering any property of the Institute or any property of an individual within the Institute premises.
+17. Unauthorized Access and Use of Facilities and Services: includes, but is not limited to unauthorized access or entry to institute buildings, structures or facilities, information systems, or obtaining or providing it to another person the means of such unauthorized access; entering a place in the University that the student is not permitted to enter, and duplication or use of keys or access cards for any institute property.
+18. Unauthorized Use of Academic Material: It involves selling, distributing, website posting, or publishing course lecture notes, handouts, readers, recordings, or other information provided by an instructor or using them for any commercial purpose without the express permission of the instructor.
+19. Refusal to Comply with Lawful Directions: It involves the unwillingness of lawful directives of institute officials and agents, including security personnel. It also includes contravening a reasonable and lawful order of institute officials and agents, including security personnel.
+20. Attempts to Defraud: It includes any activity intended to misrepresent any official document or identification used by the Institute or making a statement to the Institute that the student knows to be false, including the provision of a falsified including a medical or some other kind of certificate.
+21. Misrepresentation: It includes representing or acting on behalf of the Institute or another individual when not authorized to do so.
+22. Plagiarism: KSBL has adopted HEC Plagiarism Policy to regulate the similarity index level of the research work of the students and faculty. KSBL shall also adopt HEC Plagiarism Policy and Guidelines changes as notified by HEC from time to time. 
+
+Students found guilty of any of the above undesired and prohibited conducts will be subject to disciplinary inquiry which may result in severe punishments.
+----------
+DRESS CODE
+1. Students are to be decently dressed, appropriate to the superior cultural and social values of KSBL institute of higher learning for which it is known.
+2. Clothes should be inoffensive regarding their cuts and style, or the marks and messages printed on them.
+3. Formal dress and appearance shall be mandatory during student development activities like counseling clinic, guest speaker sessions, panel discussions, recruitment drives, exposure visits, networking nights, etc.
+4. In case of a breach of the dress code, the institute reserves the right to dismiss the student from the event.
+----------
+SOCIAL MEDIA CONDUCT
+Students are required to adhere to the law of the land, KSBL policies, and generally accepted rules of decency in their social media conduct. Students are strongly advised to refrain from the following activities online:
+1. Do not discuss your grievances regarding any matter at KSBL, your dislike or disagreement with a fellow KSBL student, faculty members or staff. Please discuss any grievance with KSBL with Student Services Department and resort to official channels of resolution. Resolves disagreements with faculty members, staff, or students in person without airing
+any complaints online.
+2. Publicize any disagreement with KSBL policies on social media. Policies are made with the best of intentions. In case you have a disagreement or wish to suggest improvements, feel free to meet Student Services and Examinations Departments or Registrar's Office.
+3. Unauthorized use of KSBL logo. KSBL logo shall not be used for any post/document unless officially authorized in writing.
+4. Violate anyone privacy like posting about in-Campus issues or sharing personal information about any fellow student, faculty, or staff member online.
+5. Share unauthorized photograph of a fellow student, faculty, or staff member without their permission.
+6. Making fun of KSBL, its sponsors, employees, students, or anyone connected to KSBL. While humor is the best medicine, avoid its use on social media vis-à-vis KSBL. This includes posts, tweets, stories, cartoons, graphics, animations, videos etc.
+7. Making unauthorized announcements on behalf of KSBL, faculty members, staff, or other students.
+----------
+CLASS DISCIPLINE
+Students are expected to be at the best of their behavior in their classes. They are required to stay focused and remain fully engaged.
+----------
+CAREER SERVICES OFFICE
+The Career Services Office (CSO) provides a diverse range of services to students and graduates as they undertake internships and job searches. These services include resume preparation, mock interviews, company presentations and interviews. The CSO also coordinates and organizes all student and club extra-curricular activities. It is responsible for arranging events, guest speaker sessions, study tours, field trips and other events as deemed appropriate by KSBL.
+
+Email ID: careerservices@ksbl.edu.pk
+----------
+2. STUDENT ADVISEMENT ON SEMESTER MATTERS
+
+2.1 The Student Services Department shall be responsible for advising the students on semester-related matters, including course offering and faculty information, timetable information, registration for the courses, add and drop of the courses, course withdrawal, class attendance, semester freeze, etc., as provided in the academic rules of the institute.
+
+2.2 The students may receive such advisement through a physical visit to the student services department or email communication.
+----------
+4. STUDENT ADVISEMENT ON ACADEMIC PROGRESSION
+4.1 Students shall be accorded steady observation of their academic performance and progress under the Academic Progress Advisement Program, mainly covering the following:
+4.1.1 To monitor progress toward completing the academic program and to discuss grades and other performance indicators with special attention paid to students on academic probation.
+4.1.2 To give special attention to the advisees on probation.
+4.1.3 To refer the advisee to other institutional resources when academic and personal problems require intervention.
+4.1.4 To interpret the institutional policies, procedures, and requirements for the students.
+4.1.5 To get the hang of the teacher's performance, the quality of teaching aids used in the classrooms, support infrastructure such as lab equipment, lab staff, TAs, sports facilities, etc., and share the feedback with the academic management.
+
+2
+4.1 Head of Program as Academic Advisor
+4.1.1 The Head of the Program shall act as Academic Advisor and is expected to:
+4.1.1.1 Demonstrate a concerned and caring attitude toward the advisees.
+4.1.1.2 Be knowledgeable of institutional policies, procedures, regulations, and offerings.
+4.1.1.3 Interact with faculty, cluster heads, Faculty Dean, student services, examinations, admin, etc., for receiving and sharing information about the advisees for effective advisement.
+4.1.1.4 Be available to advisees if they request an individual meeting.
+4.1.1.5 Exhibit effective interpersonal and communication skills.
+4.2 Advisement Meetings
+4.2.1 As a group, the academic advisor shall meet the advisees at least twice a semester, preferably in the 4th and 8th week or as deemed suitable by the academic advisor.
+4.2.2 For distance learning students, such meetings shall be held online.
+4.2.3 The first group meeting with the advisees shall be held during the orientation of the new intake to assist students with an initial adjustment to the institute's academic life.
+4.2.4 The academic advisor can require advisees to attend additional meetings on a group or individual basis.
+4.2.5 Likewise, the academic advisors shall respond to requests from the advisees for additional individual meetings or contact.
+4.2.6 The academic advisors shall communicate the schedule of group meetings to the advisees at the beginning of the semester.
+4.3 Access to Advisees' Data
+The academic advisors shall have access to the advisees' academic performance and conduct-related information, including the exam results, class attendance, documentation of appreciation, any incident of use of unfair means in examinations, disciplinary proceedings initiated against, etc.
+4.4 Record Keeping
+The academic advisor shall maintain a record of advisement proceeding with the batch and the individual advisees in a prescribed format and raise an accumulative report at the end of each semester.
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: Death in family, therefore, unable to reach in 09:30am slot class.
+
+Answer: "Sorry to hear about your loss and wish your loved one rest in peace.
+
+Leave may be granted in case the student's attendance is short due to a death in the family and/or medical reasons, the student will be required to share the evidence as mentioned below, so, the request will duly be processed for approval. 
+
+Death in Family -> Death Certificate 
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: Travelling to outside country for religious purpose, e.g., Arbaeen, Umrah etc
+
+Answer: "Thank you for showing concern and have a safe.
+
+The SS is always looking forward to facilitating our students by following the academic rules and regulations. So, under the ‘EXCEPTIONAL LEAVE REQUEST' rule i.e., mentioned in the shared student handbook:
+
+No such exception/clause commitment exists in the rule, therefore, under the 25% leniency that has been given in the attendance policy, it is advised you stay within that threshold and make sure to maintain 75% attendance in each enrolled course.
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I could not attend today's classes, as I'm going through flu and fever, and it's viral.
+it would be very kind of you if you could grant me a leave today"
+
+Answer: "We pray for your good health and speedy recovery.
+
+Appreciating your enthusiastic approach to study. However, as per the attendance policy, there is no specific leave allowance set for the Illness, however, a 25% allowance has been set to look after domestic commitments, illness, etc., hence, the student is required to maintain 75% attendance in each enrolled course to appear in the final assessment.
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I will not be able to attend the classes due to religious festival diwali/holi/ christmas. Please grant me two/three etc days leaves."
+
+Answer: "We wish you your religious festival Diwali/Holi/Christmas.
+
+Please refer to the student handbook, there is only one-day leave waiver that has been set for Diwali/Holi/Christmas, etc.
+
+Dear concerned TAs: Please make sure to not mark ‘Absent' of <Date mention here>, as per the rule, one day leave waiver is granted."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I will be leaving to perform Hajj on <Date> and my concern is that I will be not here at the time of final examination/ unable to attend classes."
+
+Answer: "We pray for your memorable journey of Umrah
+
+Please share the Visa, Air ticket, and Hajj Application. (<--in case evidence not shared by the student)
+
+Moreover, as per the exceptional leave rule, a maximum of 40% leverage including a 25% allowance has been set for Hajj. Therefore, the students will be required to maintain 60% attendance for appearances in the final examinations. 
+
+Dear concerned TAs: Please make sure to not mark ‘Absent' of <Date mention here>, as per the rule, one day leave waiver is granted."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "1- Student's request for waiver in attendance in case of short on attendance in course due to death in family and/or medical reason.
+
+2- I am writing to inform you about the passing of my Taya Abu, and I request a three-day leave to attend to the necessary arrangements and be with my family during this difficult time.
+
+3- I wanted to request you to provide me leniency on attendance till the next week ( 4th January). 
+As my Mother passed away this morning."
+
+Answer: "Sorry to hear about your loss and wish your loved one rest in peace. / we pray for your speedy recovery.
+
+Leave may be granted in case the student's attendance is short due to a death in the family and/or medical reasons, the student will be required to share the evidence as mentioned below, so, the request will duly be processed for approval. 
+
+if: Death in Family -> Death Certificate 
+if: Illness/Medical Reason -> Medical Proof e.g., Doctor's prescription, certificate, and reports. 
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Travelling to outside city with family or any personal reason."
+
+Answer: "Thank you for showing your concern and have a safe trip.
+
+Please note that no exception/clause for domestic travel commitment exists in the rule, therefore, under the 25% leniency that has been given in the attendance policy, it is advised you stay within that threshold and make sure to maintain 75% attendance in each enrolled course for appearing in the final assessment.
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I am suffering from high fever/dengue/covid etc and unable to attend class in person. Kindly allow me to take classes online from <date> to <date>.
+
+Attached are medical proof for your reference."
+
+Answer: "Responding Email-1: Thank you for showing your concern.
+Please provide the required evidence i.e., medical proof and reports. (<-- in case not provided)
+Your request for the online class is being processed for approval, we will get back to you once we receive any verdict. 
+
+Responding Email-2: Thank you for your patience. 
+Your request for the online session has been approved. The concerned class TA is in loop of the email who will share the class link with you. "
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I would like to request for online classes due to I have been offered a job in <out of city> / job commitent travelling to <out of city> for training/attending seminar etc. 
+In this regard, please allow me to attend the classes online. "
+
+Answer: "Responding Email-1: Thank you for showing your concern.
+Please provide the required evidence i.e., job offer letter/air ticket, line manager letter/seminar or workshop brochure. (<-- in case not provided)
+Your request for the online class is being processed for approval, we will get back to you once we receive any verdict. 
+
+Responding Email-2: Thank you for your patience. 
+Your request for the online session has been approved. The concerned class TA is in the loop of the email and will share the class link with you. "
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop <course> and add <course>."
+
+Answer: "Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Kindly drop my <Elective FT> and add <Elective DM>."
+
+Answer: "Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop <course> due to financial/job burden/family commitment etc."
+
+Answer: "Please contact the student services department for further details <insert contact details for department>"
+
+Please note the course load policy i.e.,
+Minimum course load: 09 credit hours (MSBA, MBA/EMBA30 & 60)
+or Minimum course load: 12 credit hours (undergrad)
+Maximum course load: 12 credit hours (MSBA, MBA/EMBA30)
+or Maximum course load: 15 credit hours (EMBA/MBA60)
+or Maximum course load: 18 credit hours (Undergrad)
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to repeat my deficit courses in order to improve my CGPA and for qualifying subsequent advanced course(s). So, please share the timetable."
+
+Answer: "Thank you for showing your concern.
+Please check the timetable for checking the timings among the registered courses and the requested deficit course, and then contact student services department for registration in case there is no timing conflict. <insert contact details for department>
+
+Please note the course load policy i.e., depending on degree programs:
+Minimum course load: 09 credit hours (MSBA, MBA/EMBA30 & 60)
+or Minimum course load: 12 credit hours (undergrad)
+Maximum course load: 12 credit hours (MSBA, MBA/EMBA30)
+or Maximum course load: 15 credit hours (EMBA/MBA60)
+or Maximum course load: 18 credit hours (Undergrad)
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Can you please guide me on the details of repeating a course to improve your GPA? 
+Can we register for it along with the already assigned semester courses & what will the process look like?"
+
+Answer: "Thank you for inquiring about repeating a course.
+
+Students may repeat the course in which have obtained a grade C or below <undergrade programs> / C+ or below <MBA/MS programs> during the spring and fall semesters subject to the offering, in this regard, students are required to request student services and ensure there should be no timing conflict with the enrolled courses that offered to the batch.
+
+would you please confirm which course are you seeking to repeat?"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop/freeze my subsequent/next semester due to professional/study burden/domestic/health reason."
+If Current Date Is: by the end of 2nd week of the semester
+
+Answer: "Please contact the student services department for further details <insert contact details for department>
+
+Further, please contact the SS dept again at least 15 days before the Fall 2024 semester commences.
+
+Moreover, students may freeze for more than one semester but shall be mindful of the maximum degree duration allowed. For further details, please see the student handbook that is available on the KSBL website https://www.ksbl.edu.pk/wp-content/uploads/2023/09/KSBL-Student-Handbook-2023-2024.pdf.
+
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop/freeze my subsequent/next semester due to professional/study burden/domestic/health reason."
+If Current Date Is: In between 3rd week to 7th week end
+
+Answer: "Hope you are well
+The student may freeze the semester till the end of the 7th week of the semester maximum i.e., <deadline to be mentioned here>. However, if the semester is frozen after the 2nd week of the semester, no fee shall be adjusted/returned, and a grade “W” will appear on the transcript against each course, and if the semester is frozen after the 7th week of the semester, no fee shall be adjusted/returned, and a grade “F” will appear on the transcript against each course reflecting on CGPA.
+  
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop/freeze my subsequent/next semester due to professional/study burden/domestic/health reason."
+If Current Date Is: After the 7th week of the semester
+
+Answer: "Hope you are well
+The student may freeze the semester by the end of the 7th week of the semester. No semester freezing shall be allowed after the expiry of 7 weeks. 
+
+Please contact the student services department for further details <insert contact details for department>
+Please let us know if anything further you need to clarify."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Can you please tell me about the course withdrawal policy?"
+
+Answer: "Please see the response below under the rule:
+1. If the course is dropped during the first two weeks of the semester, the total fee shall be adjusted to the next semester and not refunded and shall not be reflected on the Transcript.
+2. If the course is dropped by the end of the 7th week of the semester, no fee shall be refunded &/or adjusted in the subsequent semester and reflected with W on the Transcript.
+3. If the course is dropped after the 7th week of the semester, no fee shall be refunded &/or adjusted in the subsequent semester and reflected with F on the Transcript.
+
+Please let us know if anything further you need to clarify."
+----------
+# I added the date manual as the LLM refused to process it and add itself
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to drop the course of Accounting making and decision for this semester. Kindly unenroll me in this course."
+If Current Date Is: by the end of 7th week of the semester
+
+Answer: "Thank you for showing concern.
+ 
+Students can add/drop a course by the end of the second week of the semester i.e., Sunday, March 10, 2024, after the second week, a student may choose to withdraw from a course, which means that you do not wish to attempt the course and wish that it does not count in your CGPA calculation. Therefore, in case of withdrawal, the “W” grade shall be recorded on the transcript and no fee shall be adjusted in the next semester.
+ 
+
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Student's request to withdraw course after 7th week of the semester."
+If Current Date Is: After the 7th week of the semester
+
+Answer: "Thank you for showing your concern.
+
+If the course is dropped after the 7th week of the semester, no fee shall be refunded &/or adjusted in the subsequent semester and courses will be reflected with ""F"" on the Transcript.
+
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to discontinue/pogram withdrawal from the KSBL due to domestic/professional commitment/medical/financial reason etc. Please share the procedure."
+
+Answer: "Thank you for showing your concern.
+We hope things will be fine at your end. 
+
+Please share the reason to discontinue the study from the KSBL.
+Also, please return the KSBL RFID card and locker key (if issued) to the SS dept and clear your fee dues (if any).
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Please share the timetable for the upcoming spring session."
+
+Answer: "Thank you for inquiring about the timetable.
+Please note that the timetable is in the developing process, once it is finalized, will duly be shared with all students.
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Change of class timing request"
+
+Answer: "Thank you for showing concern.
+
+There are several factors involved in the development of the semester timetable such as availability of the faculty, feasible slot for batch and lecture rooms, etc, so a change in the timetable is not possible."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "What are the class timing during the month of Ramadan?"
+
+Answer: "Responding Email-1: Thank you for inquiring about class timing during the month of Ramadan.
+The timing for the classes during the month of Ramadan is underway, once it is finalized then will duly be disseminated to the students.
+OR
+Responding Email-2: Thank you for inquiring about class timing during the month of Ramadan.
+Please check your email, the classes timetable for the Ramadan has been disseminated.
+
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I need a locker for keeping my personal belonging."
+
+Answer: "Thank you for showing concern.
+Please get the locker key from the SS dept during office hours."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I lost my KSBL RFID Card during shifting/ robbing etc, therefore, requesting for the duplicate RFID Card."
+
+Answer: "Responding Email-1: Sorry, to hear about your loss.
+Please share the copy of the FIR (If robbed) blood group and CNIC number.
+
+Responding Email-2:  Thank you for sharing the required information. 
+Your request for a duplicate KSBL RFID Card is being forwarded to the concerned dept, will get back to you once the card is ready.
+
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I've lost my student card somewhere and need a renewal of it. "
+
+Answer: "Responding Email-1: Thank you for showing concern.
+The student will be required to pay Rs. 1000/- fee for the duplicate ID card to the Finance Department and share the scanned copy of the paid slip with the SS dept via the same email along with the latest photo, then request for a duplicate ID card will be processed.
+
+Responding Email-2: Thank you for sharing paid slip and latest photo, your request for duplicate ID card has been processed, and will get back to you once we receive the duplicate card from Admin dept.
+
+Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to make change of specialization from X to Y."
+
+Answer: "Please contact the student services department for further details <insert contact details for department>"
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "We students are requesting the reservation of Lecture Hall/Seminar Room/Breakout room/ computer lab for study as our mid/final assessment week is starting from <Date>."
+
+Answer: "Please contact the student services department for further details <insert contact details for department>
+
+Please make sure of the cleanness and hygiene of reserved resource and once you leave the Lecture Hall etc, please inform the Admin staff to close it."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Please accept the assignment submission since was unable to submit it on LMS due to the electricity fluctuation/link not working/the deadline passed etc. reason."
+
+Answer: "Thank you for showing your concern.
+Please contact the respective TA."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I would like to choose my specialization again. Kindly grant me access to the specialization selection (3+1 combination)."
+
+Answer: "Thank you for showing concern.
+
+Please note that the 3+1 course combination does not exist in the rule of General Management.
+You may make any one selection from the following course combinations:
+
+1. Two courses from two different specializations (2+2).
+2. Two courses from one specialization plus one course from another specialization plus one course from a third specialization (2+1+1).
+3. One course each from four different specializations (1+1+1+1)."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Can we take 6 courses in any of the semester so that we can graduate in time? "
+
+Answer: "Reply on Extra course:
+The students are required to study the courses as per the approved curriculum of the degree program. However, the student may apply for an extra course once after the completion of the degree program, and that additional course will not be part of the degree program.
+
+Reply on additional course:
+For registration in an additional course, the competent authority may allow for one more course beyond the maximum course limit to the student from the last two semesters of the program in either of two cases.
+a. The student's CGPA should be 3.50 and above. 
+b. The student requires the course to graduate within the designated timeframe. However, enrolling in the course will not result in the student graduating before the minimum duration i.e., 2 years required for the degree."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I dont understand how can such a core course under talent management not be offered?"
+
+Answer: "Thank you for your query.
+
+“Managing Talent and Culture” is a specialized elective course, not a core course, because core courses are mandatory to study, while the elective courses are by choice of the students based on their chosen specialization or course combination. Therefore, based on the survey, an insufficient number of students chose the “Managing Talent and Culture” course, and it is not being offered in the spring 2023 semester as decided by the Competent Authority."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Would the institution's policy allow me to give the missed quiz in sometime? "
+
+Answer: "Thank you for inquiring about the missed assessment.
+As per the grading policy for missed assessment, if an assessment overall weightage is 10% or less, a student will not be offered any opportunity to attempt the assessment at a later date, regardless of the reason, while it is concerned course instructor's prerogative to decide for make-up assessment i.e., quiz. 
+
+If the total weightage of the assessment is greater than 10%, then the concerned Program Head's prerogative is to decide on make-up/retake the assessment, hence, a student will be required to submit the documents proof for review by the Program Head."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I wanted to know if ksbl offer summer semester to its student."
+
+Answer: "Thank you for inquiring about the summer session.
+Summer semester is not offered at KSBL. However, students are advised to repeat courses for grade improvement during the regular semester (Fall/Spring) subject to the offering of the course and by following the course load rule."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "If I opt for dual specializations , then what would be the duration of my MBA program and how would the courses be divided into semesters ?"
+
+Answer: "Thank you for inquiring about the dual specialization/major.
+Please note that the minimum duration for MBA30 credit hours is 1.5 years while 3 years maximum, therefore, if any student is interested in opting for dual majors, he/she will be required to complete both majors within the maximum program duration limit. 
+Moreover, the student will be required to apply for a dual major before the start of the final examination of the final semester."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Change of exam timing request"
+
+Answer: "Dear Student, Thank you for showing concern.
+There are several factors involved in the development of the exam timetable such as availability of the faculty, feasible slot for batch and lecture rooms, etc, so a change in the timetable is not possible."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I am writing to request final clearance from your end so that I may proceed towards obtaining transcript and degree."
+
+Answer: "Dear Student, Thank you for reaching out. In response to your query, kindly direct this requests or concerns regarding Degree and Transctipt Issuance to the Registrar Office. They will be able to assist you further with the necessary procedures and ensure proper handling of your inquiry."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Please check my Assignment/quizzes/project etc marks are no updated"
+
+Answer: "Dear Student,
+I am writing to inform you that the Examinations Department has disseminated the examination results, as provided by the respective course instructors or Teaching Assistants (TAs). Should you have any inquiries or require further clarification regarding your results, I encourage you to reach out to your course instructor or TA, if available, for a detailed discussion and potential revision of marks.Please feel free to communicate with your instructor or TA regarding any concerns you may have regarding your examination results."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to apply for rechecking of Midterm/Final Exam "
+
+Answer: "Dear Student, I would like to bring to your attention the examination rules established by KSBL. According to these guidelines, rechecking of examination papers is not permitted. However, students are entitled to apply for marks scrutiny or recounting. If you have any further questions or require assistance regarding this matter, please do not hesitate to reach out."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "Please share marks break up for all courses"
+
+Answer: "Dear Student, I would like to inform you that the marks breakdown for all course assessments is readily accessible on the Learning Management System (LMS). However, in the event that you encounter any discrepancies or if marks are not updated on the LMS platform, please follow the outlined procedure below: 1. Kindly send an email to your respective course instructor or course Teaching Assistant (TA), if available, detailing the specific issue regarding the unavailability or discrepancy in marks on the LMS. 2. Ensure to include examination@ksbl.edu.pk in the CC (carbon copy) section of your email for centralized tracking and coordination.By adhering to this protocol, we can promptly address any concerns or discrepancies regarding the availability of marks on the LMS platform."
+----------
+This section is taken from the internal support manual for student support. Answer appropriately, but don't quote the exact passage or its source.
+
+Question: "I want to review my checked answer copy"
+
+Answer: "Dear Student,
+I am writing to inform you that the Examinations Department has disseminated the examination results, as provided by the respective course instructors or Teaching Assistants (TAs). Should you have any inquiries or require further clarification regarding your results, I encourage you to reach out to your course instructor or TA, if available, for a detailed discussion and potential revision of marks. Please feel free to communicate with your instructor or TA regarding any concerns you may have regarding your examination results.                                                                       "
