@@ -7,6 +7,14 @@ from langchain_core.documents import Document
 
 st.set_page_config(page_title="KSBLBot Admin", layout="wide")
 
+st.sidebar.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+st.sidebar.page_link("mvp.py", label="User", icon="💬")
+st.sidebar.page_link("pages/admin.py", label="Admin", icon="⚙️")
+
 ADMIN_PASSWORD = "ksbl@admin2024"
 
 CATEGORIES = ["admission", "program", "scholarship", "student_policy", "general"]
