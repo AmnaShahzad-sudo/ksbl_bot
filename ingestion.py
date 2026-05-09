@@ -2,7 +2,7 @@ from langchain_chroma import Chroma
 from langchain_voyageai import VoyageAIEmbeddings
 import toml
 
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
 
 secrets = toml.load('.streamlit/secrets.toml')
 VOYAGE_API_KEY = secrets['VOYAGE_API_KEY']

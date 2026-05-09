@@ -3,7 +3,7 @@ import os
 import shutil
 from langchain_chroma import Chroma
 from langchain_voyageai import VoyageAIEmbeddings
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
 
 st.set_page_config(page_title="KSBLBot Admin", layout="wide")
 
