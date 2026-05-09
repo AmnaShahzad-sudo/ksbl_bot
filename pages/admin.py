@@ -156,12 +156,28 @@ with tab2:
                     truncation=False
                 )
 
+                import time
+                
                 if os.path.exists("./chroma_db"):
                     shutil.rmtree("./chroma_db")
 
-                db = Chroma.from_documents(
-                    all_chunks, voyage_embeddings, persist_directory='./chroma_db'
-                )
+                db = Chroma(embedding_function=voyage_embeddings, persist_directory='./chroma_db')
+                
+                batch_size = 90
+                total_batches = (len(all_chunks) + batch_size - 1) // batch_size
+                
+                progress_text = st.empty()
+                for i in range(total_batches):
+                    progress_text.text(f"Embedding batch {i+1} of {total_batches}... (This avoids the Voyage AI free-tier rate limits)")
+                    start_idx = i * batch_size
+                    end_idx = min((i + 1) * batch_size, len(all_chunks))
+                    
+                    db.add_documents(all_chunks[start_idx:end_idx])
+                    
+                    if i < total_batches - 1:
+                        time.sleep(21) # 21 seconds delay ensures we stay under 3 requests per minute
+                
+                progress_text.empty()
 
                 if 'rag_db' in st.session_state:
                     del st.session_state['rag_db']
