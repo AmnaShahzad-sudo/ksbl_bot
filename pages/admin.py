@@ -105,7 +105,7 @@ with tab1:
             with open(fpath, "r", encoding="utf-8") as f:
                 current_content = f.read()
 
-            new_content = st.text_area("File Content", value=current_content, height=450, key="file_editor")
+            new_content = st.text_area("File Content", value=current_content, height=450, key=f"editor_{edit_cat}_{edit_file}")
 
             col_save, col_del = st.columns([1, 1])
             with col_save:
