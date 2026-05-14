@@ -1,22 +1,45 @@
+import os
+import shutil
 from langchain_chroma import Chroma
-from langchain_voyageai import VoyageAIEmbeddings
-import toml
+from langchain_community.embeddings import OllamaEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from langchain_core.documents import Document
+# 1. Remove the old Chroma DB if it exists so we don't get dimension errors
+if os.path.exists('./chroma_db'):
+    shutil.rmtree('./chroma_db')
+    print("Deleted old chroma_db directory.")
 
-secrets = toml.load('.streamlit/secrets.toml')
-VOYAGE_API_KEY = secrets['VOYAGE_API_KEY']
-
-with open('chunks.txt') as f:
+# 2. Read the pre-processed chunks file
+with open('chunks.txt', encoding='utf-8') as f:
     data = f.read()
 
-chunks = [Document(page_content=i, metadata={
-                   'source': 'local'}) for i in data.split('----------')]
+# Since the file was previously hard-split by '----------', let's join it back to raw text 
+# (or just keep it as is, but we want the text splitter to handle overlap)
+raw_text = data.replace('----------', '\n\n')
 
-# Truncation is set because the default 'None' breaks the api
-voyage_embeddings = VoyageAIEmbeddings(
-    voyage_api_key=VOYAGE_API_KEY, model='voyage-large-2', truncation=False
+# 3. Create the text splitter with overlapping
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000,
+    chunk_overlap=200,
+    length_function=len,
+    is_separator_regex=False,
 )
 
+# 4. Split the text into overlapping chunks
+chunks = text_splitter.create_documents([raw_text], metadatas=[{'source': 'local'}])
+print(f"Created {len(chunks)} overlapping chunks.")
+
+# 5. Initialize local Ollama embeddings
+ollama_embeddings = OllamaEmbeddings(
+    model='nomic-embed-text', 
+    base_url='http://localhost:11434'
+)
+
+# 6. Build and save the new Chroma DB
+print("Building the new Chroma database...")
 db = Chroma.from_documents(
-    chunks, voyage_embeddings, persist_directory='./chroma_db')
+    chunks, 
+    ollama_embeddings, 
+    persist_directory='./chroma_db'
+)
+print("Finished! The vector store is ready.")

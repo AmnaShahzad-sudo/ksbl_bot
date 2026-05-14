@@ -1,7 +1,8 @@
 
 import prompts
 from langchain_community.vectorstores import chroma
-from langchain_voyageai import VoyageAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
+from openai import OpenAI
 from datetime import datetime, timezone, timedelta
 import prettytable
 import google.generativeai as genai
@@ -36,21 +37,9 @@ with open('system-prompt.txt', 'r') as f:
 # TODO: Remove initial load time before diplaying UI if model is Gemini
 
 models = {
-    'claude-3-haiku-20240307': {
-        'api': 'anthropic',
-        'display': 'Claude Haiku'
-    },
-    'gemini-pro': {
-        'api': 'google',
-        'display': 'Gemini'
-    },
-    'claude-3-sonnet-20240229': {
-        'api': 'anthropic',
-        'display': 'Claude Sonnet'
-    },
-    'claude-instant-1.2': {
-        'api': 'anthropic',
-        'display': 'Claude Instant'
+    'llama3.2': {
+        'api': 'ollama',
+        'display': 'Llama 3.2'
     },
 }
 
@@ -77,7 +66,7 @@ st.session_state['rag'] = st.sidebar.checkbox(
 # TODO: Re-ranking shouldn't be enabled if RAG is not
 st.session_state['reranking'] = st.sidebar.checkbox(
     'Reranking',
-    value=True,
+    value=False,
     disabled=not st.session_state.admin_mode
 )
 
@@ -107,12 +96,11 @@ def get_api_type():
     return models[st.session_state.model]['api']
 
 
-if get_api_type() == 'anthropic':
-    client = anthropic.Anthropic(api_key=st.secrets['ANTHROPIC_API_KEY'])
-
-elif get_api_type() == 'google':
-    genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
-    model = genai.GenerativeModel('gemini-pro')
+if get_api_type() == 'ollama':
+    ollama_client = OpenAI(
+        base_url='http://localhost:11434/v1',
+        api_key='ollama',
+    )
 
 
 def initialize_chat():
@@ -125,23 +113,13 @@ def initialize_chat():
             # TODO: Does this even persist??
             # Truncation is set because the default 'None' breaks the api
             # TODO: Should probably be set to true
-            voyage_embeddings = VoyageAIEmbeddings(
-                api_key=st.secrets['VOYAGE_API_KEY'], model='voyage-large-2', truncation=False
+            ollama_embeddings = OllamaEmbeddings(
+                model='nomic-embed-text', base_url='http://localhost:11434'
             )
             st.session_state.rag_db = chroma.Chroma(
-                persist_directory='./chroma_db', embedding_function=voyage_embeddings)
+                persist_directory='./chroma_db', embedding_function=ollama_embeddings)
 
-    if get_api_type() == 'google':
-        first_message = {'role': 'user', 'parts': [
-            system_prompt + 'Do you understand?']}
-        response_text = model.generate_content([first_message]).text
-        # st.write(response)
 
-        # TODO: HACK
-        st.session_state.messages.append(
-            {'role': 'user', 'content': system_prompt, 'display': False})
-        st.session_state.messages.append(
-            {'role': 'assistant', 'content': response_text, 'display': False})
 
     st.session_state['initialized'] = True
 
@@ -177,7 +155,7 @@ if prompt := st.chat_input("Talk to KSBLBot"):
     tooltip = None
 
     with st.chat_message('assistant', avatar="Assets/KSBL_Logo_square.png"):
-        if get_api_type() == 'anthropic':
+        if get_api_type() == 'ollama':
             if st.session_state.rag:
 
                 user_message = st.session_state.messages[-1]
@@ -295,22 +273,23 @@ if prompt := st.chat_input("Talk to KSBLBot"):
                 system_prompt = system_prompt.format(detail=st.session_state.detail, date_today=(
                     datetime.now(timezone.utc) + timedelta(hours=5)).strftime("%d %B %Y"))
 
-                with client.messages.stream(
+                or_messages = [{'role': 'system', 'content': system_prompt}] + [
+                    {'role': m['role'], 'content': m.get('model_content', m['content'])}
+                    for m in st.session_state.messages
+                ]
+
+                stream = ollama_client.chat.completions.create(
                     model=st.session_state.model,
                     max_tokens=1000,
                     temperature=0.0,
-                    # TODO: Proper delimiter between user query and policy doc so it knows it is talking to the user
-                    # TODO: Proper prompt construction using parameters like detail
-                    # TODO: The date statement could probably be shorter
-                    system=system_prompt,
-                    # TODO: Fix the key in message dict
-                    messages=[
-                        {'role': m['role'], 'content': m['model_content']}
-                        for m in st.session_state.messages
-                    ],
-                    # stream=True
-                ) as stream:
-                    response_text = st.write_stream(stream.text_stream)
+                    messages=or_messages,
+                    stream=True,
+                )
+                response_text = st.write_stream(
+                    chunk.choices[0].delta.content or ''
+                    for chunk in stream
+                    if chunk.choices[0].delta.content
+                )
 
                 print(response_text)
 
@@ -318,35 +297,22 @@ if prompt := st.chat_input("Talk to KSBLBot"):
                 user_message['model_content'] = user_message['content']
 
             else:
-                with client.messages.stream(
+                or_messages = [{'role': 'system', 'content': system_prompt}] + [
+                    {'role': m['role'], 'content': m['content']}
+                    for m in st.session_state.messages
+                ]
+                stream = ollama_client.chat.completions.create(
                     model=st.session_state.model,
                     max_tokens=1000,
                     temperature=0.0,
-                    system=system_prompt,
-                    messages=[
-                        {'role': m['role'], 'content': m['content']}
-                        for m in st.session_state.messages
-                    ],
-                    # stream=True
-                ) as stream:
-                    response_text = st.write_stream(stream.text_stream)
-
-        if get_api_type() == 'google':
-            # TODO: Error handling
-            gen_config = genai.types.GenerationConfig(
-                temperature=0.0
-            )
-            # The 'informative answer' makes the model give out much longer responses.
-            messages = [{'role': 'model' if m['role'] == 'assistant' else m['role'], 'parts': [
-                m['content'] + '\nPlease give a detailed and informative answer.'] if m['role'] == 'user' else m['content']} for m in st.session_state.messages]
-            print(messages[2:])
-            response = model.generate_content(
-                messages, generation_config=gen_config, stream=True)
-
-            st.write_stream((chunk.text for chunk in response))
-
-            print(response.candidates)
-            response_text = response.text
+                    messages=or_messages,
+                    stream=True,
+                )
+                response_text = st.write_stream(
+                    chunk.choices[0].delta.content or ''
+                    for chunk in stream
+                    if chunk.choices[0].delta.content
+                )
 
     # TODO: Fix this. Probably have diplay_content and model_content
     st.session_state.messages.append(
@@ -354,3 +320,5 @@ if prompt := st.chat_input("Talk to KSBLBot"):
 
     # For the tooltip to appear
     st.rerun()
+
+#hello

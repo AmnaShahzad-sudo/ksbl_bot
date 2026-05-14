@@ -1,6 +1,6 @@
 import prompts
 from langchain_community.vectorstores import chroma
-from langchain_voyageai import VoyageAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
 from datetime import datetime, timezone, timedelta
 import prettytable
 import google.generativeai as genai
@@ -47,16 +47,16 @@ with open('system-prompt.txt', 'r', encoding='utf-8') as f:
     system_prompt = f.read()
 
 models = {
-    'openai/gpt-4.1-mini': {
-        'api': 'openrouter',
-        'display': 'GPT-4.1 Mini'
+    'llama3.2': {
+        'api': 'ollama',
+        'display': 'Llama 3.2'
     },
 }
 
 # Hardcoded settings - no sidebar
-st.session_state['model'] = 'openai/gpt-4.1-mini'
+st.session_state['model'] = 'llama3.2'
 st.session_state['rag'] = True
-st.session_state['reranking'] = True
+st.session_state['reranking'] = False
 st.session_state['detail'] = 'concise'
 st.session_state['email_mode'] = False
 
@@ -65,18 +65,19 @@ def get_api_type():
     return models[st.session_state.model]['api']
 
 
-if get_api_type() == 'openrouter':
-    openrouter_client = OpenAI(
-        base_url='https://openrouter.ai/api/v1',
-        api_key=st.secrets['OPENROUTER_API_KEY'],
+if get_api_type() == 'ollama':
+    ollama_client = OpenAI(
+        base_url='http://localhost:11434/v1',
+        api_key='ollama',
     )
 
 if st.session_state.rag and 'rag_db' not in st.session_state:
-    voyage_embeddings = VoyageAIEmbeddings(
-        voyage_api_key=st.secrets['VOYAGE_API_KEY'], model='voyage-large-2', truncation=False
+    ollama_embeddings = OllamaEmbeddings(
+        model='nomic-embed-text',
+        base_url='http://localhost:11434'
     )
     st.session_state.rag_db = chroma.Chroma(
-        persist_directory='./chroma_db', embedding_function=voyage_embeddings)
+        persist_directory='./chroma_db', embedding_function=ollama_embeddings)
 
 # Display chat history
 for message in st.session_state.messages:
@@ -209,10 +210,10 @@ if prompt := st.chat_input("Talk to KSBLBot"):
         api_messages = [{'role': m['role'], 'content': m.get('model_content', m['content'])} for m in history]
         api_messages.append({'role': 'user', 'content': model_content})
 
-        if get_api_type() == 'openrouter':
+        if get_api_type() == 'ollama':
             or_messages = [{'role': 'system', 'content': active_system_prompt}] + api_messages
             try:
-                stream = openrouter_client.chat.completions.create(
+                stream = ollama_client.chat.completions.create(
                     model=st.session_state.model,
                     max_tokens=1000,
                     temperature=0.0,
