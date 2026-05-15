@@ -70,7 +70,7 @@ class ChatRequest(BaseModel):
     email_mode: Optional[bool] = False
 
 @app.post("/v1/chat")
-@limiter.limit("5/minute")
+@limiter.limit("20/minute")
 async def chat(
     request: Request,
     chat_request: ChatRequest, 
