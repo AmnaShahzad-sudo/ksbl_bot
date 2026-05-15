@@ -75,6 +75,9 @@ async def chat(
     chat_request: ChatRequest, 
     api_key: str = Depends(verify_api_key)
 ):
+    # Validate request
+    if not chat_request.messages or not chat_request.messages[-1].content.strip():
+        raise HTTPException(status_code=400, detail="Message content cannot be empty")
     # Convert Pydantic models to dictionaries
     msgs = [m.model_dump() for m in chat_request.messages]
     

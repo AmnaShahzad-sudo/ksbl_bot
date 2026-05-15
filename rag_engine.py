@@ -77,9 +77,15 @@ class KSBLBotEngine:
         history = messages[:-1]
         api_messages = [{'role': 'system', 'content': active_system_prompt}]
         for m in history:
-            api_messages.append({'role': m['role'], 'content': m.get('model_content', m['content'])})
+            content = m.get('model_content') or m.get('content') or "..."
+            api_messages.append({'role': m['role'], 'content': content})
         
-        api_messages.append({'role': 'user', 'content': context_data['model_content']})
+        # Ensure user content is never empty
+        user_content = context_data.get('model_content') or f"Question: {last_query}"
+        api_messages.append({'role': 'user', 'content': user_content})
+
+        # Final safety check: remove any messages with empty content (though the above should prevent it)
+        api_messages = [m for m in api_messages if m.get('content')]
 
         # Groq stream with filtering
         stream = self.groq_client.chat.completions.create(
