@@ -61,19 +61,19 @@
 
         // Event Listeners
         const bubble = document.getElementById('ksbl-chat-bubble');
-        const window = document.getElementById('ksbl-chat-window');
+        const chatWindow = document.getElementById('ksbl-chat-window');
         const closeBtn = document.getElementById('ksbl-chat-close');
         const sendBtn = document.getElementById('ksbl-chat-send');
         const input = document.getElementById('ksbl-chat-input');
 
         bubble.onclick = () => {
-            window.classList.remove('ksbl-hidden');
+            chatWindow.classList.remove('ksbl-hidden');
             bubble.classList.add('ksbl-hidden');
             input.focus();
         };
 
         closeBtn.onclick = () => {
-            window.classList.add('ksbl-hidden');
+            chatWindow.classList.add('ksbl-hidden');
             bubble.classList.remove('ksbl-hidden');
         };
 
