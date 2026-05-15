@@ -11,3 +11,10 @@ openai
 voyageai
 langchain
 PyGithub
+groq
+fastapi
+uvicorn
+slowapi
+python-dotenv
+python-multipart
+cors-headers
