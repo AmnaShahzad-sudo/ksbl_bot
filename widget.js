@@ -1,4 +1,9 @@
 (function() {
+    // Load marked.js for markdown parsing
+    const markedScript = document.createElement('script');
+    markedScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    document.head.appendChild(markedScript);
+
     // Configuration - will be overridden by the init function
     let config = {
         apiUrl: '',
@@ -95,14 +100,21 @@
         msgWrapper.innerHTML = `
             ${role === 'assistant' ? iconHtml : ''}
             <div class="ksbl-msg">
-                <div class="msg-content">${text}</div>
+                <div class="msg-content"></div>
             </div>
             ${role === 'user' ? iconHtml : ''}
         `;
         
+        const messageContent = msgWrapper.querySelector('.msg-content');
+        if (role === 'assistant' && window.marked) {
+            messageContent.innerHTML = marked.parse(text);
+        } else {
+            messageContent.innerText = text;
+        }
+
         msgArea.appendChild(msgWrapper);
         msgArea.scrollTop = msgArea.scrollHeight;
-        return msgWrapper.querySelector('.msg-content');
+        return messageContent;
     }
 
     async function sendMessage() {
@@ -114,7 +126,7 @@
         addMessage('user', text);
         chatHistory.push({ role: 'user', content: text });
 
-        const loadingMsg = addMessage('assistant', '<span class="dot-typing"></span>');
+        const loadingMsg = addMessage('assistant', '');
         
         try {
             const response = await fetch(config.apiUrl, {
@@ -131,7 +143,6 @@
 
             if (!response.ok) throw new Error('Failed to connect to API');
 
-            loadingMsg.innerHTML = '';
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             let botResponse = '';
@@ -141,7 +152,13 @@
                 if (done) break;
                 const chunk = decoder.decode(value);
                 botResponse += chunk;
-                loadingMsg.innerText = botResponse;
+                
+                if (window.marked) {
+                    loadingMsg.innerHTML = marked.parse(botResponse);
+                } else {
+                    loadingMsg.innerText = botResponse;
+                }
+                
                 document.getElementById('ksbl-chat-messages').scrollTop = document.getElementById('ksbl-chat-messages').scrollHeight;
             }
 
