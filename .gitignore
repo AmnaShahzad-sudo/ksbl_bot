@@ -1,1 +1,30 @@
-.streamlit/*
+# Streamlit secrets
+.streamlit/secrets.toml
+.streamlit/config.toml
+.streamlist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+admin_files/
+Assets/
+pages/
+ksbl-mvp-main/
+*.zip
+*.log
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+*.dll
