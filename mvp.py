@@ -6,6 +6,7 @@ import prettytable
 import google.generativeai as genai
 import anthropic
 from openai import OpenAI
+from groq import Groq
 import numpy as np
 import streamlit as st
 import voyageai
@@ -47,14 +48,14 @@ with open('system-prompt.txt', 'r', encoding='utf-8') as f:
     system_prompt = f.read()
 
 models = {
-    'openai/gpt-4.1-mini': {
-        'api': 'openrouter',
-        'display': 'GPT-4.1 Mini'
+    'qwen/qwen3-32b': {
+        'api': 'groq',
+        'display': 'Qwen 3 32B'
     },
 }
 
 # Hardcoded settings - no sidebar
-st.session_state['model'] = 'openai/gpt-4.1-mini'
+st.session_state['model'] = 'qwen/qwen3-32b'
 st.session_state['rag'] = True
 st.session_state['reranking'] = True
 st.session_state['detail'] = 'concise'
@@ -65,10 +66,9 @@ def get_api_type():
     return models[st.session_state.model]['api']
 
 
-if get_api_type() == 'openrouter':
-    openrouter_client = OpenAI(
-        base_url='https://openrouter.ai/api/v1',
-        api_key=st.secrets['OPENROUTER_API_KEY'],
+if get_api_type() == 'groq':
+    groq_client = Groq(
+        api_key=st.secrets['GROQ_API_KEY'],
     )
 
 if st.session_state.rag and 'rag_db' not in st.session_state:
@@ -209,21 +209,56 @@ if prompt := st.chat_input("Talk to KSBLBot"):
         api_messages = [{'role': m['role'], 'content': m.get('model_content', m['content'])} for m in history]
         api_messages.append({'role': 'user', 'content': model_content})
 
-        if get_api_type() == 'openrouter':
-            or_messages = [{'role': 'system', 'content': active_system_prompt}] + api_messages
+        if get_api_type() == 'groq':
+            groq_messages = [{'role': 'system', 'content': active_system_prompt}] + api_messages
             try:
-                stream = openrouter_client.chat.completions.create(
+                stream = groq_client.chat.completions.create(
                     model=st.session_state.model,
                     max_tokens=1000,
                     temperature=0.0,
-                    messages=or_messages,
+                    messages=groq_messages,
                     stream=True,
                 )
-                response_text = st.write_stream(
-                    chunk.choices[0].delta.content or ''
-                    for chunk in stream
-                    if chunk.choices[0].delta.content
-                )
+                def stream_filtered():
+                    text_buffer = ""
+                    is_thinking = False
+                    for chunk in stream:
+                        delta = chunk.choices[0].delta.content or ""
+                        if not delta:
+                            continue
+                        
+                        text_buffer += delta
+                        
+                        while True:
+                            if not is_thinking:
+                                if "<think>" in text_buffer:
+                                    parts = text_buffer.split("<think>", 1)
+                                    if parts[0]:
+                                        yield parts[0]
+                                    text_buffer = parts[1]
+                                    is_thinking = True
+                                else:
+                                    # Handle partial tag starts
+                                    tag_start = text_buffer.rfind("<")
+                                    if tag_start != -1 and "<think>".startswith(text_buffer[tag_start:]):
+                                        if tag_start > 0:
+                                            yield text_buffer[:tag_start]
+                                            text_buffer = text_buffer[tag_start:]
+                                        break
+                                    else:
+                                        yield text_buffer
+                                        text_buffer = ""
+                                        break
+                            else:
+                                if "</think>" in text_buffer:
+                                    parts = text_buffer.split("</think>", 1)
+                                    text_buffer = parts[1]
+                                    is_thinking = False
+                                else:
+                                    text_buffer = "" # Discard thinking
+                                    break
+
+                response_text = st.write_stream(stream_filtered())
             except Exception as e:
                 st.error(f"Error: {e}")
                 response_text = "There was an issue generating a response."
