@@ -55,8 +55,7 @@ def get_secret(key, default=None):
         return default
 
 engine = KSBLBotEngine(
-    groq_api_key=get_secret("GROQ_API_KEY"),
-    voyage_api_key=get_secret("VOYAGE_API_KEY")
+    groq_api_key=get_secret("GROQ_API_KEY")
 )
 
 class ChatMessage(BaseModel):

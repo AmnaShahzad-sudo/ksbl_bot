@@ -3,12 +3,12 @@ google-generativeai
 numpy
 streamlit
 chromadb
-langchain_voyageai
+# removed langchain_voyageai
 langchain_community
 langchain_chroma
 prettytable
+fastembed
 openai
-voyageai
 langchain
 PyGithub
 groq
