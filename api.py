@@ -21,13 +21,20 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # CORS Configuration - Update with your WordPress domain
+# api.py around line 24
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For production, replace with your domain
+    allow_origins=[
+        "https://ksbl-admin-dashboard.vercel.app", # Your production frontend
+        "http://localhost:3000",                  # Your local development
+        "https://dev.ksbl.pk",
+        "https://www.ksbl.edu.pk/"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # API Key Security
 API_KEY_NAME = "X-API-KEY"

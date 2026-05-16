@@ -123,6 +123,14 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* Error Banner */}
+      {error && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-100 rounded-xl flex items-center gap-3 text-red-600 animate-in fade-in slide-in-from-top-2">
+          <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          <p className="text-sm font-semibold">{error}</p>
+        </div>
+      )}
+
       {/* Stats/Status Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {[
