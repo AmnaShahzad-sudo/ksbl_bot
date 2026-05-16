@@ -19,8 +19,11 @@ class KSBLBotEngine:
             embedding_function=self.embeddings
         )
         
-        with open('system-prompt.txt', 'r', encoding='utf-8') as f:
-            self.base_system_prompt = f.read()
+        try:
+            with open('prompts/system_prompt.txt', 'r', encoding='utf-8') as f:
+                self.base_system_prompt = f.read()
+        except FileNotFoundError:
+            self.base_system_prompt = "You are KSBLBot, an assistant for KSBL."
 
     def check_vulgarity(self, text: str) -> bool:
         vulgar_words = [

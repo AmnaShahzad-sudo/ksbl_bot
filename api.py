@@ -1,8 +1,9 @@
 import os
 import time
+import shutil
 from typing import List, Dict, Optional
 from pydantic import BaseModel
-from fastapi import FastAPI, Header, HTTPException, Depends, Request
+from fastapi import FastAPI, Header, HTTPException, Depends, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from slowapi import Limiter, _rate_limit_exceeded_handler
@@ -11,9 +12,7 @@ from slowapi.errors import RateLimitExceeded
 from dotenv import load_dotenv
 
 from rag_engine import KSBLBotEngine
-
-# Load environment variables
-load_dotenv()
+from knowledge_manager import KnowledgeManager
 
 # Initialize FastAPI and Rate Limiter
 limiter = Limiter(key_func=get_remote_address)
@@ -58,6 +57,8 @@ engine = KSBLBotEngine(
     groq_api_key=get_secret("GROQ_API_KEY")
 )
 
+km = KnowledgeManager(db=engine.db)
+
 class ChatMessage(BaseModel):
     role: str
     content: str
@@ -94,6 +95,101 @@ async def chat(
 @app.get("/health")
 async def health():
     return {"status": "healthy", "timestamp": time.time()}
+
+# --- Admin Endpoints ---
+
+@app.get("/v1/admin/files")
+async def list_files(api_key: str = Depends(verify_api_key)):
+    return km.list_files()
+
+@app.post("/v1/admin/upload")
+async def upload_file(
+    file: UploadFile = File(...), 
+    api_key: str = Depends(verify_api_key)
+):
+    # Save file to data directory
+    file_path = os.path.join(km.data_dir, file.filename)
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    
+    # Ingest into Chroma
+    try:
+        km.ingest_file(file.filename)
+        return {"message": f"File {file.filename} uploaded and ingested successfully."}
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Ingestion failed: {str(e)}")
+
+@app.delete("/v1/admin/files/{filename}")
+async def delete_file(
+    filename: str, 
+    api_key: str = Depends(verify_api_key)
+):
+    try:
+        km.delete_file(filename)
+        return {"message": f"File {filename} deleted successfully."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/v1/admin/files/{filename}/content")
+async def get_file_content(
+    filename: str, 
+    api_key: str = Depends(verify_api_key)
+):
+    content = km.get_file_content(filename)
+    if not content and filename not in [f['filename'] for f in km.list_files()]:
+        raise HTTPException(status_code=404, detail="File not found")
+    return {"filename": filename, "content": content}
+
+@app.put("/v1/admin/files/{filename}/content")
+async def update_file_content(
+    filename: str, 
+    data: Dict[str, str], 
+    api_key: str = Depends(verify_api_key)
+):
+    content = data.get("content")
+    if content is None:
+        raise HTTPException(status_code=400, detail="Content is required")
+    try:
+        km.update_file_content(filename, content)
+        return {"message": f"File {filename} updated and re-ingested successfully."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# --- Prompt Endpoints ---
+
+@app.get("/v1/admin/prompts")
+async def list_prompts(api_key: str = Depends(verify_api_key)):
+    return km.list_prompts()
+
+@app.get("/v1/admin/prompts/{filename}/content")
+async def get_prompt_content(
+    filename: str, 
+    api_key: str = Depends(verify_api_key)
+):
+    content = km.get_prompt_content(filename)
+    if not content and filename not in [p['filename'] for p in km.list_prompts()]:
+        raise HTTPException(status_code=404, detail="Prompt not found")
+    return {"filename": filename, "content": content}
+
+@app.put("/v1/admin/prompts/{filename}/content")
+async def update_prompt_content(
+    filename: str, 
+    data: Dict[str, str], 
+    api_key: str = Depends(verify_api_key)
+):
+    content = data.get("content")
+    if content is None:
+        raise HTTPException(status_code=400, detail="Content is required")
+    try:
+        km.update_prompt_content(filename, content)
+        # If it's the main system prompt, update the live engine
+        if filename == "system_prompt.txt":
+            engine.base_system_prompt = content
+        return {"message": f"Prompt {filename} updated successfully."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn
