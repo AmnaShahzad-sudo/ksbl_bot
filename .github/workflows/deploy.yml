@@ -1,0 +1,34 @@
+name: Deploy to Local Server
+
+on:
+  push:
+    branches:
+      - main  # Change this to master if that's your primary branch
+
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Navigate to the repository directory
+            cd ~/ksbl_bot
+            
+            # Fetch and reset/pull latest changes from GitHub
+            git fetch --all
+            git reset --hard origin/main
+            
+            # Pull latest packages and rebuild/restart the container
+            docker compose down
+            docker compose up -d --build
+            
+            # Clean up dangling images to save disk space
+            docker image prune -f

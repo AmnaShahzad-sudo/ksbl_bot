@@ -23,6 +23,8 @@ pages/
 ksbl-mvp-main/
 *.zip
 *.log
+chroma_db/
+data/
 
 # Byte-compiled / optimized / DLL files
 *.so
