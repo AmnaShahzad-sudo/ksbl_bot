@@ -8,8 +8,9 @@ from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 import prompts
 
 class KSBLBotEngine:
-    def __init__(self, groq_api_key: str, chroma_db_path: str = "./chroma_db"):
-        self.groq_client = Groq(api_key=groq_api_key)
+    def __init__(self, groq_api_key: str, chroma_db_path: str = "./chroma_db", base_url: str = None, model_name: str = "qwen/qwen3-32b"):
+        self.groq_client = Groq(api_key=groq_api_key, base_url=base_url) if base_url else Groq(api_key=groq_api_key)
+        self.model_name = model_name
         
         # FastEmbed is a lightweight, high-performance local embedding model
         self.embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
@@ -92,7 +93,7 @@ class KSBLBotEngine:
 
         # Groq stream with filtering
         stream = self.groq_client.chat.completions.create(
-            model="qwen/qwen3-32b",
+            model=self.model_name,
             max_tokens=1000,
             temperature=0.0,
             messages=api_messages,

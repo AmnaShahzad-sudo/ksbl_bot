@@ -47,15 +47,16 @@ st.markdown("""
 with open('system-prompt.txt', 'r', encoding='utf-8') as f:
     system_prompt = f.read()
 
+active_model = st.secrets.get('LLM_MODEL', 'qwen/qwen3-32b')
 models = {
-    'qwen/qwen3-32b': {
+    active_model: {
         'api': 'groq',
-        'display': 'Qwen 3 32B'
+        'display': active_model
     },
 }
 
 # Hardcoded settings - no sidebar
-st.session_state['model'] = 'qwen/qwen3-32b'
+st.session_state['model'] = active_model
 st.session_state['rag'] = True
 st.session_state['reranking'] = True
 st.session_state['detail'] = 'concise'
@@ -68,7 +69,8 @@ def get_api_type():
 
 if get_api_type() == 'groq':
     groq_client = Groq(
-        api_key=st.secrets['GROQ_API_KEY'],
+        api_key=st.secrets.get('GROQ_API_KEY', 'dummy_key'),
+        base_url=st.secrets.get('LLM_BASE_URL'),
     )
 
 if st.session_state.rag and 'rag_db' not in st.session_state:

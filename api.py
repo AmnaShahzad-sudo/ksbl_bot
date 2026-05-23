@@ -61,7 +61,9 @@ def get_secret(key, default=None):
         return default
 
 engine = KSBLBotEngine(
-    groq_api_key=get_secret("GROQ_API_KEY")
+    groq_api_key=get_secret("GROQ_API_KEY", "dummy_key"),
+    base_url=get_secret("LLM_BASE_URL"),
+    model_name=get_secret("LLM_MODEL", "qwen/qwen3-32b")
 )
 
 km = KnowledgeManager(db=engine.db)
