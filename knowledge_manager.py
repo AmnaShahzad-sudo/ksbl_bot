@@ -83,11 +83,15 @@ class KnowledgeManager:
 
         # Add to Chroma
         self.db.add_documents(documents)
+        if hasattr(self.db, 'persist'):
+            self.db.persist()
 
     def delete_file_vectors(self, filename: str):
         # LangChain Chroma wrapper doesn't have a direct 'delete by metadata' in all versions
         # but we can use the underlying collection
         self.db.delete(where={"source": filename})
+        if hasattr(self.db, 'persist'):
+            self.db.persist()
 
     def delete_file(self, filename: str):
         file_path = os.path.join(self.data_dir, filename)

@@ -17,7 +17,7 @@ import {
   AlertCircle
 } from "lucide-react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://ksbl-bot.onrender.com/v1";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000/v1";
 
 interface FileData {
   filename: string;
@@ -108,8 +108,8 @@ export default function DashboardPage() {
         </div>
         
         <div className="flex items-center gap-3">
-          <label className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm cursor-pointer shadow-lg shadow-blue-100 transition-all active:scale-95">
-            <FilePlus className="w-4 h-4" />
+          <label className="flex items-center gap-2 px-4 py-2.5 bg-ksbl-navy hover:bg-ksbl-navy/95 text-white rounded-xl font-semibold text-sm cursor-pointer shadow-lg shadow-ksbl-navy/10 transition-all active:scale-95">
+            <FilePlus className="w-4 h-4 text-ksbl-gold" />
             {uploading ? "Uploading..." : "Upload New File"}
             <input type="file" className="hidden" onChange={handleUpload} disabled={uploading} />
           </label>
@@ -134,12 +134,12 @@ export default function DashboardPage() {
       {/* Stats/Status Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {[
-          { label: "Total Documents", value: files.length, icon: FileText, color: "blue" },
-          { label: "AI Status", value: "Active", icon: CheckCircle2, color: "green" },
-          { label: "Last Sync", value: "Just now", icon: Clock, color: "amber" },
+          { label: "Total Documents", value: files.length, icon: FileText, bgColor: "bg-ksbl-navy/10", textColor: "text-ksbl-navy" },
+          { label: "AI Status", value: "Active", icon: CheckCircle2, bgColor: "bg-green-50", textColor: "text-green-700" },
+          { label: "Last Sync", value: "Just now", icon: Clock, bgColor: "bg-ksbl-gold/10", textColor: "text-ksbl-gold" },
         ].map((stat, i) => (
           <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
-            <div className={`w-12 h-12 rounded-xl bg-${stat.color}-50 flex items-center justify-center text-${stat.color}-600`}>
+            <div className={`w-12 h-12 rounded-xl ${stat.bgColor} flex items-center justify-center ${stat.textColor}`}>
               <stat.icon className="w-6 h-6" />
             </div>
             <div>
@@ -158,7 +158,7 @@ export default function DashboardPage() {
             <input 
               type="text"
               placeholder="Search documents by name..."
-              className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ksbl-navy/20 focus:border-ksbl-navy"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -194,7 +194,7 @@ export default function DashboardPage() {
                   <tr key={file.filename} className="hover:bg-slate-50/50 transition-colors group">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                        <div className="w-9 h-9 rounded-lg bg-ksbl-navy/5 flex items-center justify-center text-ksbl-navy">
                           <FileText className="w-5 h-5" />
                         </div>
                         <span className="text-sm font-semibold text-slate-700">{file.filename}</span>
@@ -213,7 +213,7 @@ export default function DashboardPage() {
                       <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                         <button 
                           onClick={() => router.push(`/dashboard/edit/${encodeURIComponent(file.filename)}`)}
-                          className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                          className="p-2 text-slate-400 hover:text-ksbl-navy hover:bg-ksbl-navy/10 rounded-lg transition-all"
                           title="Edit"
                         >
                           <Edit3 className="w-4 h-4" />

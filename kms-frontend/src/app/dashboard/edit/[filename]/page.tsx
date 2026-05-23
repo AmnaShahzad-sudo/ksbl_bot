@@ -11,7 +11,7 @@ import {
   Loader2
 } from "lucide-react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://ksbl-bot.onrender.com/v1";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000/v1";
 
 export default function EditFilePage() {
   const router = useRouter();
@@ -61,7 +61,7 @@ export default function EditFilePage() {
 
   if (loading) return (
     <div className="flex h-screen items-center justify-center bg-slate-50">
-      <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      <Loader2 className="w-8 h-8 animate-spin text-ksbl-navy" />
     </div>
   );
 
@@ -78,7 +78,7 @@ export default function EditFilePage() {
           </button>
           <div>
             <div className="flex items-center gap-2">
-              <FileText className="w-4 h-4 text-blue-600" />
+              <FileText className="w-4 h-4 text-ksbl-navy" />
               <h1 className="text-lg font-bold text-slate-800">{decodeURIComponent(filename)}</h1>
             </div>
             <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Editor Mode</p>
@@ -95,7 +95,7 @@ export default function EditFilePage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm shadow-lg shadow-blue-100 transition-all active:scale-[0.98] disabled:opacity-50"
+            className="flex items-center gap-2 px-6 py-2 bg-ksbl-navy hover:bg-ksbl-navy/95 text-white rounded-xl font-bold text-sm shadow-lg shadow-ksbl-navy/10 transition-all active:scale-[0.98] disabled:opacity-50"
           >
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             Save & Sync
@@ -126,8 +126,8 @@ export default function EditFilePage() {
           </div>
         )}
         
-        <div className="flex items-center gap-2 text-amber-600 bg-amber-50 p-3 rounded-xl border border-amber-100">
-          <AlertTriangle className="w-4 h-4" />
+        <div className="flex items-center gap-2 text-ksbl-navy bg-ksbl-navy/5 p-3 rounded-xl border border-ksbl-gold/20">
+          <AlertTriangle className="w-4 h-4 text-ksbl-gold" />
           <p className="text-xs font-medium">Saving will automatically update the AI's vector database. This may take a few seconds to reflect.</p>
         </div>
       </div>

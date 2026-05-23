@@ -65,6 +65,15 @@ engine = KSBLBotEngine(
     model_name=get_secret("LLM_MODEL", "gemma3:1b")
 )
 
+# Start background thread to ensure model is pulled
+import threading
+from ollama_helper import ensure_model_pulled
+threading.Thread(
+    target=ensure_model_pulled, 
+    args=(engine.model_name, get_secret("LLM_BASE_URL")), 
+    daemon=True
+).start()
+
 km = KnowledgeManager(db=engine.db)
 
 class ChatMessage(BaseModel):

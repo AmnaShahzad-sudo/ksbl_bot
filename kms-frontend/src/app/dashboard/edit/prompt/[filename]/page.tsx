@@ -11,7 +11,7 @@ import {
   Loader2
 } from "lucide-react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://ksbl-bot.onrender.com/v1";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000/v1";
 
 export default function EditPromptPage() {
   const router = useRouter();
@@ -24,6 +24,12 @@ export default function EditPromptPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const role = localStorage.getItem("user_role");
+    if (role === "admin") {
+      router.push("/dashboard");
+      return;
+    }
+
     const fetchContent = async () => {
       const key = localStorage.getItem("ksbl_api_key");
       try {
@@ -39,7 +45,7 @@ export default function EditPromptPage() {
     };
 
     if (filename) fetchContent();
-  }, [filename]);
+  }, [filename, router]);
 
   const handleSave = async () => {
     setSaving(true);
@@ -61,7 +67,7 @@ export default function EditPromptPage() {
 
   if (loading) return (
     <div className="flex h-screen items-center justify-center bg-slate-50">
-      <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      <Loader2 className="w-8 h-8 animate-spin text-ksbl-navy" />
     </div>
   );
 
@@ -94,7 +100,7 @@ export default function EditPromptPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-100 transition-all active:scale-[0.98] disabled:opacity-50"
+            className="flex items-center gap-2 px-6 py-2 bg-ksbl-navy hover:bg-ksbl-navy/95 text-white rounded-xl font-bold text-sm shadow-lg shadow-ksbl-navy/10 transition-all active:scale-[0.98] disabled:opacity-50"
           >
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             Save Changes
@@ -124,8 +130,8 @@ export default function EditPromptPage() {
           </div>
         )}
         
-        <div className="flex items-center gap-2 text-indigo-600 bg-indigo-50 p-3 rounded-xl border border-indigo-100">
-          <AlertTriangle className="w-4 h-4" />
+        <div className="flex items-center gap-2 text-ksbl-navy bg-ksbl-navy/5 p-3 rounded-xl border border-ksbl-gold/20">
+          <AlertTriangle className="w-4 h-4 text-ksbl-gold" />
           <p className="text-xs font-medium">Changes to system prompts take effect immediately for new chat sessions.</p>
         </div>
       </div>
