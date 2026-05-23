@@ -2,14 +2,19 @@ import os
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Generator
 import prettytable
-from groq import Groq
+from langchain_ollama import ChatOllama
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_community.vectorstores import chroma
 from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 import prompts
 
 class KSBLBotEngine:
-    def __init__(self, groq_api_key: str, chroma_db_path: str = "./chroma_db", base_url: str = None, model_name: str = "qwen/qwen3-32b"):
-        self.groq_client = Groq(api_key=groq_api_key, base_url=base_url) if base_url else Groq(api_key=groq_api_key)
+    def __init__(self, groq_api_key: str = None, chroma_db_path: str = "./chroma_db", base_url: str = None, model_name: str = "gemma3:1b"):
+        self.llm = ChatOllama(
+            model=model_name,
+            temperature=0.3,
+            base_url=base_url
+        )
         self.model_name = model_name
         
         # FastEmbed is a lightweight, high-performance local embedding model
@@ -91,19 +96,25 @@ class KSBLBotEngine:
         # Final safety check: remove any messages with empty content (though the above should prevent it)
         api_messages = [m for m in api_messages if m.get('content')]
 
-        # Groq stream with filtering
-        stream = self.groq_client.chat.completions.create(
-            model=self.model_name,
-            max_tokens=1000,
-            temperature=0.0,
-            messages=api_messages,
-            stream=True,
-        )
+        # Convert to LangChain message objects
+        langchain_messages = []
+        for m in api_messages:
+            role = m['role']
+            content = m['content']
+            if role == 'system':
+                langchain_messages.append(SystemMessage(content=content))
+            elif role == 'user':
+                langchain_messages.append(HumanMessage(content=content))
+            elif role in ('assistant', 'model'):
+                langchain_messages.append(AIMessage(content=content))
+
+        # Stream using ChatOllama
+        stream = self.llm.stream(langchain_messages)
 
         text_buffer = ""
         is_thinking = False
         for chunk in stream:
-            delta = chunk.choices[0].delta.content or ""
+            delta = chunk.content or ""
             if not delta:
                 continue
             

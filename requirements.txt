@@ -11,7 +11,7 @@ fastembed
 openai
 langchain
 PyGithub
-groq
+langchain-ollama
 fastapi
 uvicorn
 slowapi
