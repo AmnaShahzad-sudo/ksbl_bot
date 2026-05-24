@@ -25,16 +25,11 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://ksbl-admin-dashboard.vercel.app", # Your production frontend
-        "http://localhost:3000",                  # Your local development
+        "https://ksbl-admin-dashboard.vercel.app", # Production frontend
+        "http://localhost:3000",                  # Local dev port 3000
+        "http://localhost:3001",                  # Local dev port 3001
         "https://dev.ksbl.pk",
-        "https://www.ksbl.edu.pk/",
-        "https://ksbl-admin-dashboard.vercel.app/",
-        "https://ksbl-admin-dashboard.vercel.app/login",
-        "https://ksbl-admin-dashboard.vercel.app/dashboard",
-        "https://ksbl-admin-dashboard.vercel.app/dashboard/files",
-        "https://ksbl-admin-dashboard.vercel.app/dashboard/prompts",
-        "https://ksbl-admin-dashboard.vercel.app/dashboard/chat"
+        "https://www.ksbl.edu.pk"                 # Base domain (no trailing slash)
     ],
     allow_credentials=True,
     allow_methods=["*"],
