@@ -28,7 +28,13 @@ app.add_middleware(
         "https://ksbl-admin-dashboard.vercel.app", # Your production frontend
         "http://localhost:3000",                  # Your local development
         "https://dev.ksbl.pk",
-        "https://www.ksbl.edu.pk/"
+        "https://www.ksbl.edu.pk/",
+        "https://ksbl-admin-dashboard.vercel.app/",
+        "https://ksbl-admin-dashboard.vercel.app/login",
+        "https://ksbl-admin-dashboard.vercel.app/dashboard",
+        "https://ksbl-admin-dashboard.vercel.app/dashboard/files",
+        "https://ksbl-admin-dashboard.vercel.app/dashboard/prompts",
+        "https://ksbl-admin-dashboard.vercel.app/dashboard/chat"
     ],
     allow_credentials=True,
     allow_methods=["*"],

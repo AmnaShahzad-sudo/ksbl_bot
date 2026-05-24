@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import { 
   ArrowLeft, 
@@ -13,60 +13,50 @@ import {
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://ksbl-bot.onrender.com/v1";
 
-export default function EditFilePage() {
+export default function CreateFilePage() {
   const router = useRouter();
-  const params = useParams();
-  const filename = params.filename as string;
-  
+  const [filename, setFilename] = useState("");
   const [content, setContent] = useState("");
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const fetchContent = async () => {
-      const key = localStorage.getItem("ksbl_api_key");
-      try {
-        const response = await axios.get(`${API_BASE}/admin/files/${filename}/content`, {
-          headers: { "X-API-KEY": key }
-        });
-        setContent(response.data.content);
-      } catch (err) {
-        setError("Failed to load file content.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (filename) fetchContent();
-  }, [filename]);
-
   const handleSave = async () => {
+    if (!filename.trim()) {
+      setError("Filename is required.");
+      return;
+    }
+    if (!content.trim()) {
+      setError("File content cannot be empty.");
+      return;
+    }
+
     setSaving(true);
+    setError("");
     const key = localStorage.getItem("ksbl_api_key");
+
+    // Clean up filename: ensure it has an extension (default to .txt if none provided)
+    let finalFilename = filename.trim();
+    if (!finalFilename.includes(".")) {
+      finalFilename += ".txt";
+    }
+
     try {
-      await axios.put(`${API_BASE}/admin/files/${filename}/content`, {
+      await axios.put(`${API_BASE}/admin/files/${encodeURIComponent(finalFilename)}/content`, {
         content: content
       }, {
         headers: { "X-API-KEY": key }
       });
-      alert("File updated and re-ingested successfully.");
+      alert(`File "${finalFilename}" created and ingested successfully.`);
       router.push("/dashboard");
-    } catch (err) {
-      alert("Failed to save changes.");
+    } catch (err: any) {
+      setError(err.response?.data?.detail || "Failed to save new file.");
     } finally {
       setSaving(false);
     }
   };
 
-  if (loading) return (
-    <div className="flex h-screen items-center justify-center bg-slate-50">
-      <Loader2 className="w-8 h-8 animate-spin text-[#002554]" />
-    </div>
-  );
-
   return (
-    <div className="flex flex-col h-screen bg-slate-50">
+    <div className="flex flex-col h-screen bg-slate-50 animate-in fade-in duration-300">
       {/* Editor Header */}
       <header className="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between shadow-sm sticky top-0 z-10">
         <div className="flex items-center gap-4">
@@ -79,7 +69,7 @@ export default function EditFilePage() {
           <div>
             <div className="flex items-center gap-2">
               <FileText className="w-4 h-4 text-[#002554]" />
-              <h1 className="text-lg font-bold text-[#002554]">{decodeURIComponent(filename)}</h1>
+              <h1 className="text-lg font-bold text-[#002554]">Create New File</h1>
             </div>
             <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Editor Mode</p>
           </div>
@@ -105,26 +95,38 @@ export default function EditFilePage() {
 
       {/* Editor Content */}
       <div className="flex-1 p-8 overflow-hidden flex flex-col gap-4">
-        {error ? (
+        {error && (
           <div className="bg-red-50 border border-red-100 p-4 rounded-xl flex items-center gap-3 text-red-600">
             <AlertTriangle className="w-5 h-5" />
             <p className="text-sm font-medium">{error}</p>
           </div>
-        ) : (
-          <div className="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-            <div className="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center justify-between">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Raw Text Content</span>
-              <span className="text-[10px] font-medium text-slate-400">{content.length} characters</span>
-            </div>
-            <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="flex-1 w-full p-6 text-slate-700 font-mono text-sm resize-none focus:outline-none leading-relaxed"
-              spellCheck={false}
-              placeholder="Start typing your knowledge base content here..."
-            />
-          </div>
         )}
+
+        <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-2">
+          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Filename</label>
+          <input
+            type="text"
+            value={filename}
+            onChange={(e) => setFilename(e.target.value)}
+            placeholder="e.g. admission_faq.txt"
+            className="w-full px-4 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#002554]/20 focus:border-[#002554] text-slate-700 font-medium"
+          />
+          <p className="text-[10px] text-slate-400">If no file extension is specified, `.txt` will be automatically appended.</p>
+        </div>
+
+        <div className="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+          <div className="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center justify-between">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Raw Text Content</span>
+            <span className="text-[10px] font-medium text-slate-400">{content.length} characters</span>
+          </div>
+          <textarea
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            className="flex-1 w-full p-6 text-slate-700 font-mono text-sm resize-none focus:outline-none leading-relaxed"
+            spellCheck={false}
+            placeholder="Start typing your knowledge base content here..."
+          />
+        </div>
         
         <div className="flex items-center gap-2 text-[#002554] bg-[#002554]/5 p-3 rounded-xl border border-[#002554]/10">
           <AlertTriangle className="w-4 h-4 text-[#002554]" />

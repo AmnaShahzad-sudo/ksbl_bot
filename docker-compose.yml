@@ -3,10 +3,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      network: host
     container_name: ksbl-bot-backend
     restart: unless-stopped
-    network_mode: host
+    ports:
+      - "8010:8010"
     command: uvicorn api:app --host 0.0.0.0 --port 8010
     volumes:
       - ./chroma_db:/app/chroma_db
@@ -16,3 +16,17 @@ services:
       - .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    profiles:
+      - with-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

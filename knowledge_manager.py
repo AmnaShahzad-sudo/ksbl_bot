@@ -12,6 +12,11 @@ class KnowledgeManager:
     def __init__(self, data_dir: str = "./data", prompts_dir: str = "./prompts", chroma_db_path: str = "./chroma_db", db: Chroma = None):
         self.data_dir = data_dir
         self.prompts_dir = prompts_dir
+        
+        # Ensure directories exist
+        os.makedirs(self.data_dir, exist_ok=True)
+        os.makedirs(self.prompts_dir, exist_ok=True)
+        
         self.embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
         if db:
             self.db = db
