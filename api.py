@@ -28,17 +28,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 # api.py around line 24
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://ksbl-admin-dashboard.vercel.app", # Production frontend
-        "http://localhost:3000",                  # Local dev port 3000
-        "http://localhost:3001",                  # Local dev port 3001
-        "http://localhost:8000",                  # Swagger/Local API port 8000
-        "http://127.0.0.1:8000",                  # Swagger/Local API port 8000 (IP)
-        "http://localhost:8010",                  # Docker API port 8010
-        "http://127.0.0.1:8010",                  # Docker API port 8010 (IP)
-        "https://dev.ksbl.pk",
-        "https://www.ksbl.edu.pk"                 # Base domain (no trailing slash)
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
