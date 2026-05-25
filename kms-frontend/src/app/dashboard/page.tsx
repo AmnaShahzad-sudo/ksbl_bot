@@ -17,7 +17,7 @@ import {
   AlertCircle
 } from "lucide-react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://ksbl-bot.onrender.com/v1";
+const API_BASE =  "https://ksbl-bot.onrender.com/v1";
 
 interface FileData {
   filename: string;
