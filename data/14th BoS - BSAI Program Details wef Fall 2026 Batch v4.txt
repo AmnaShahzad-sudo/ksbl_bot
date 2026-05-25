@@ -1,0 +1,283 @@
+BSAI – Bachelor of Science in Artificial Intelligence
+Degree Program
+
+About the Domain
+Artificial Intelligence is the branch of computer science concerned with building systems that can perform tasks which, when performed by humans, are understood to require intelligence. These tasks include perceiving the world through vision and language, reasoning under uncertainty, learning from experience, planning sequences of actions, and communicating in natural language. The ambition of AI is not merely to automate these tasks, but to understand them deeply enough to replicate and extend them computationally. From Alan Turing's foundational question — can machines think? — to today's large language models and computer vision systems that match specialist human performance, AI has evolved from a philosophical provocation into one of the most transformative technologies in history.
+The current era of AI is defined by machine learning: systems that discover patterns from vast data rather than following explicit rules. The results have been extraordinary. Large language models generate fluent text, engage in multi-step reasoning, and accelerate scientific discovery. Computer vision systems diagnose medical images with accuracy matching specialist clinicians. Reinforcement learning agents have mastered games of immense complexity and are beginning to manage physical systems in the real world. Generative AI has pushed this further still — producing original text, images, code, and even novel scientific hypotheses that were once the exclusive province of human creativity. Most recently, agentic AI systems have begun to pursue multi-step goals autonomously, orchestrating tools, making decisions, and acting in the world with minimal human intervention — marking a shift from AI as a capable assistant to AI as an independent actor.
+Yet AI is not only an engineering achievement — it is an intellectual and ethical frontier. Questions about how learning systems generalize, why they fail, what biases they encode, how their decisions can be explained, and what their deployment means for human autonomy and social equity are among the most important questions of our time. The discipline thus demands not only mathematical and computational competence, but critical thinking about the systems being built and the world they act upon.
+
+About the Program
+The Bachelor of Science in Artificial Intelligence at KSBL is a four-year undergraduate degree designed to develop graduates who can understand, design, build, and critically evaluate intelligent systems across the full breadth of the discipline — from its mathematical foundations to its applied frontiers.
+The program begins by establishing the quantitative and computational foundations that AI demands: linear algebra, calculus, probability and statistics, and programming. Students then advance into the core of the discipline — machine learning theory and practice, deep learning architectures, natural language processing, computer vision, and AI planning and reasoning. Alongside this technical progression, the program engages students with the emerging science of AI safety, fairness, interpretability, and ethics — preparing them not only to build AI systems, but to build them responsibly.
+The curriculum is structured to reflect the way AI is actually practiced: as a discipline that draws simultaneously on theory, experimentation, and engineering. Students learn to formulate problems mathematically, implement and train models, evaluate their performance rigorously, and deploy them in real-world settings. A dedicated focus on generative AI equips students to design and work with systems that produce original text, images, and code, while exposure to agentic AI prepares them to build autonomous systems that pursue goals, orchestrate tools, and act with minimal human intervention — arguably the most consequential frontier in the field today. Elective pathways allow students to deepen their expertise in areas such as computer vision, healthcare AI, or intelligent systems, while project-based learning throughout the program develops the habit of applying knowledge to open-ended, ambiguous problems — the kind that define professional AI work.
+Graduates of the BSAI program are prepared for roles as machine learning engineers, AI researchers, data scientists, NLP engineers, computer vision specialists, and AI product developers. They are equally well-prepared to pursue postgraduate research in AI, machine learning, cognitive science, and related fields, with the mathematical depth and research orientation required for doctoral study.
+
+Program Vision Statement
+To develop AI leaders who build intelligent systems serving humanity, integrating technical competence with a deep moral conscience to ensure that technology is guided by ethics and character as a transformative force for good.
+
+Program Mission Statement
+The BSAI program at KSBL is committed to:
+* Building genuine technical depth: providing rigorous, contemporary education in Artificial Intelligence grounded in the mathematical and computational foundations that lasting expertise requires and continuously evolving with the frontier of the field.
+* Forming people of character alongside professionals of competence: embedding the principles of Truth, Trustworthiness, Humility, Integrity, and Sabr (TTHIS) drawn from the Prophetic tradition into the culture of the program, so that ethical reasoning is not an add-on but a habit of mind making conscience inseparable from practice.
+* Bridging AI and the real world: leveraging KSBL's unique identity at the intersection of technology, business, and leadership to produce graduates who understand intelligent systems in the context of organizational strategy, entrepreneurship, and societal impact.
+* Serving both Pakistan and the world: preparing graduates who can contribute meaningfully to Pakistan's technological and economic development while remaining competitive for careers and postgraduate study at leading institutions globally.
+* Nurturing lifelong learners: because in a field that reinvents itself as rapidly as AI does, the ability and hunger to keep learning is among the most important things the program can give a student.
+
+Program Objectives
+To produce world-class socially responsible computing professionals with the following qualities:
+PEO1: Able to use contemporary artificial intelligence technologies to design and implement innovative solutions to emerging industry demands. 
+PEO2: Able to communicate effectively and utilize critical thinking, problem-solving, teamwork, and other skills for decision-making.
+PEO3: Assume societal responsibility in managerial and entrepreneurial undertakings and demonstrate the highest standards of character and good manners encompassing truthfulness, trustworthiness, humility, integrity, and striving in times of hardship.
+PEO4: Capable of continuing professional development to maintain pace with the latest AI technology demands.  
+
+Program Learning Outcomes
+Upon completion of a BS in Artificial Intelligence, students will be able to:
+
+Program Learning
+Outcomes (PLOs)Computing Professional Graduate
+1. Academic EducationUnderstand fundamental computing and AI concepts, theories, and practices, along with the mathematical, statistical, and data-driven foundations that intelligent systems demand, and essential soft skills and business insights.2. Knowledge for Solving Computing ProblemsAn ability to apply knowledge of algorithms, computing fundamentals, mathematics, probability, and statistical reasoning to analyze data, model uncertainty, and solve a variety of computational and intelligent systems problems.3. Problem AnalysisAnalyze a situation to identify one or more problems that can be resolved with computational or intelligent system intervention.4. Design/ Development of SolutionsAbility to design, implement, and evaluate a computational and AI-based solution of varying complexities to diverse societal problems.5. Modern Tool UsageBe able to select and apply appropriate techniques, frameworks, and modern tools for modelling, analyzing, and solving complex computational and data-driven problems.6. Individual and TeamworkWork effectively as individual or part of a team to develop and deliver quality solutions to computing problems.7. CommunicationCommunicate effectively with a range of audiences both written and orally.8. Computing Professionalism and SocietyAbility to apply reasoning informed by contextual knowledge to assess the societal, ethical, legal, and cultural implications of intelligent systems — including issues of bias, fairness, transparency, and human autonomy — and analyze their impact across all areas of assessment.9. EthicsUnderstand and commit to professional computing and AI practice's ethics, obligations, and norms.10. Life-long LearningInvestigate new methodologies and technologies for lifelong learning and professional growth, and recognize the need for, and ability to engage in, independent learning for continuous progress as a computing and AI professional.
+
+Program Objectives (POs) and Program Learning Outcomes (PLOs) Mapping:
+
+PLOs \ POsPO1PO2PO3PO4Academic EducationKnowledge for Solving Computing Problems?Problem Analysis?Design/ Development of Solutions?Modern Tool Usage?Individual and Teamwork?Communication?Computing Professionalism and Society?Ethics?Life-long Learning?
+
+Program Structure
+
+The BSAI program at KSBL is a 135 credit hour, four-year undergraduate degree delivered over eight semesters. Its structure is designed around a deliberate progression: students begin with foundational knowledge, advance through a rigorous computing and AI core, and culminate in specialized, applied, and professional experiences that prepare them for the demands of an industry being reshaped by intelligent systems.
+
+The curriculum is organized into six course groups, each serving a distinct purpose within the overall degree architecture: 
+
+General Education courses develop the intellectual breadth, communication skills, civic awareness, and ethical grounding that a well-rounded professional demands — including Islamic Studies, Pakistan Studies, and Quranic Teaching, reflecting KSBL's character-based educational philosophy.
+
+Math and Supporting courses build the rigorous quantitative framework and scientific literacy required for advanced computational reasoning. These courses provide the formal logic and analytical tools – such as Probability and Statistics, Linear Algebra,  Calculus, Discrete Structures — that are not merely supportive of AI but absolutely central to it; a student who cannot reason mathematically cannot practice AI seriously.
+
+The Computing Core forms the shared backbone of the degree, covering the essential areas of computing that every AI professional must command: programming, data structures, algorithms, operating systems, databases, networks, and software engineering — the infrastructure upon which all intelligent systems are ultimately built.
+
+Domain Core comprises the specialized technical pillar of the degree, providing the rigourous theoretical and applied foundation specific to Artificial Intelligence. These courses transition students from general computing to AI expertise, covering essential topics such as Introduction to AI programming, machine learning, artificial neural networks, knowledge representation and reasoning etc.
+
+Domain Electives allow students to pursue depth in areas aligned with the AI frontier, across streams including Machine Learning, Computer Vision, Natural Language Processing, Generative AI, and Agentic Systems.
+
+Field Experience and the Capstone Project bridge academic preparation with professional practice — requiring students to design, build, and evaluate intelligent systems in real organizational settings, confronting the ambiguity and complexity that define professional AI work.
+
+
+Course GroupsCredit HoursGeneral Education34Math and Supporting 12Computing Core46Domain Core18Domain Electives21Field Experience/ Internship03Total134
+
+
+
+
+Program Curriculum
+
+
+Sem.TypeCodeCourse TitleCr. HourPrerequisite1CoreAI1101Programming Fundamentals3+1Nil1Gen EdGE1101Freshman English2+0Nil1Gen EdGE1102Application of Information & Communication Technologies2+1Nil1Gen EdGE1103Islamic Studies2+0Nil1Gen EdGE1104Pakistan Studies2+0Nil1Gen EdGE1106Discrete Structures (Quantitative Reasoning-I)3+0Nil1Gen EdGE2204International Language (Chinese/ Arabic etc.) (Arts and Humanities)2+0Nil1FNDFN1101Foundation Mathematics I3+0 (NC)NilTotal182CoreAI1201Object-Oriented Programming3+1CS11012CoreCS1202Digital Logic Design2+1GE11022MathMT1101Linear Algebra3+0Nil2Gen EdGE1203Scientific Mind (Natural Science)3+0Nil2Gen Ed GE1204Reading and Writing Skills 2+0GE11012FNDFN1201Foundation Mathematics II3+0 (NC)FN11012Gen EdGE2102Civic and Community Engagement2+0NilTotal173CoreAI2101Data Structures3+1CS12013CoreCS2103Database Management Systems3+1GE11023Gen EdGE1206Calculus & Analytical Geometry (Quantitative Reasoning-II)3+0Nil3CoreCS2205Computer Organization and Assembly Language2+1CS12023Gen EdGE2103Oral Communication & Public Communication Skills2+0GE12043Gen Ed GE2108Introduction to Business Management (Social Science)2+0 Nil3Gen EdGE2105Quranic Teaching 1 / Comparative Study of Religions 1 (Non-Muslims)0+1NilTotal194CoreCS2202Software Engineering3+0Nil4CoreCS3101Artificial Intelligence3+0CS21014CoreCS3105Information Security2+1Nil4Gen EdGE2205Entrepreneurship2+0Nil4Gen EdGE2201Ideology and Constitution of Pakistan2+0Nil4Gen EdGE2202Quranic Teaching 2 / Comparative Study of Religions 2 (Non-Muslims)0+1Nil4MathMT3103Probability and Statistics3+0NilTotal175CoreCS2201Operating Systems2+1CS2205
+CS21015CoreCS3102Computer Networks2+1GE11025CoreCS3103Design and Analysis of Algorithm3+0CS21015DCoreAI31xxDomain Core 1 (Programming for AI)2+1/ 3+0CS12015DCoreAI31xxDomain Core 2 (Machine Learning)3+1MT1101
+MT31035MathMT3103Numerical Methods / Multivariate Calculus3+0GE1206Total196DCoreAI32xxDomain Core 3 (ANNs & Deep Learning)3+0Machine Learning6DCoreAI32xxDomain Core 42+1/ 3+0CSxxxx6DCoreAI32xxDomain Core 53+0CSxxxx6ElecAI32xxAI Elective I2+1/ 3+0CSxxxx6ElecAI32xxAI Elective II2+1/ 3+0CSxxxx     Total157CoreAI4101FYP I0+37DCoreAI41xxDomain Core 6 (Natural Language Processing)2+1/ 3+0ANNs & Deep Learning7ElecAI41xxAI Elective III2+1/ 3+0CSxxxx7ElecAI41xxAI Elective IV2+1/ 3+0CSxxxx7ElecAI41xxAI Elective V2+1/ 3+0CSxxxxTotal 158CoreAI4201FYP II0+3CS41018SupSS4202Consulting and Professional Practices3+0Nil 8AI4102Internship/ Field Experience0+3Nil8ElecAI41xxAI Elective VI2+1/ 3+0CSxxxx8ElecAI41xxAI Elective VII2+1/ 3+0CSxxxxTotal15Total Credit Hours = 135
+** The students will undertake a mandatory Professional Certification approved by the department as a replacement for one of the Elective courses.
+
+
+Domain Core Courses
+* Programming for AI (Data Science Fundamentals, Data Cleaning and Wrangling)
+* Machine Learning
+* Artificial Neural Networks & Deep Learning (Computer Vision included)
+* Knowledge Representation & Reasoning
+* Parallel & Distributed Computing
+* Natural Language Processing
+* Generative AI & Large Language Models
+* AI Agents & Agentic Workflows
+
+
+
+List of Electives
+
+StreamCodeTitlePrerequisiteGenerative AI & Language EngineeringGenerative AI & Large Language Models (LLM)AI Agents and Agentic WorkflowsMulti-modal Generative AIVoice AI & Speech TechnologyAI Operations & ScalabilityMLOps (Machine Learning Operations)Coud-Native AI & Distributed SystemsAI Security, Robustness, & ReliabilityAutonomous & Bio-Inspired SystemsRobotics & Autonomous SystemsBio-Inspired ComputingMulti-Agent SystemsEdge AI & Embedded SystemsReinforcement LearningComputer VisionEthics, Policy, & Safety in AIAI Ethics, Policy, and GovernanceExplainable AI (XAI) and InterpretabilityAI Strategy and Digital TransformationData ScienceData Visualization and CommunicationBig Data Fundamentals and AnalyticsData Mining and Data WarehousingTime Series Analysis and ForecastingData Engineering and Big Data Pipelines
+
+
+Stream 1: Generative AI & Language Engineering
+
+Natural Language Processing (NLP)
+A foundational course on how computers process and analyze human language.
+
+Core Topics:
+* Tokenization, Lemmatization, and POS Tagging.
+* Word Embeddings (Word2Vec, GloVe).
+* Sequence-to-Sequence models.
+* Sentiment Analysis and Named Entity Recognition (NER).
+
+
+Generative AI and Large Language Models (LLMs)
+Explores the architecture and application of models that generate text, images, and code. It transitions from traditional RNNs to modern Transformer-based architectures.
+
+Core Topics:
+* Attention Mechanisms and Transformer Architecture.
+* Pre-training, Fine-tuning, and Instruction Tuning.
+* Prompt Engineering and Retrieval-Augmented Generation (RAG).
+* Diffusion Models and GANs (Generative Adversarial Networks).
+
+
+AI Agents and Agentic Workflows
+This course moves from "Chatbots" to "Autonomous Agents." It focuses on designing systems where LLMs can reason, use tools (like calculators or web search), and execute multi-step tasks independently. This is currently one of the fastest-growing areas in AI development.
+
+Core Topics:
+* Reasoning Frameworks: Chain-of-Thought (CoT), Tree-of-Thought, and ReAct (Reason + Act) patterns.
+* Tool Use (Function Calling): Teaching models to interact with APIs, databases, and software tools.
+* Multi-Agent Systems: Coordinating multiple specialized AI agents to solve complex problems (e.g., an "Architect" agent and a "Coder" agent).
+* Memory Management: Short-term vs. Long-term memory in agents and state management.
+* Evaluation: Benchmarking agentic reliability and "loop" prevention.
+
+
+Multi-modal Generative AI
+Modern AI is no longer text-only. This course explores models that bridge the gap between different types of data, such as text-to-image, text-to-video, and image-to-text (captioning).
+
+Core Topics:
+* Cross-Modal Embeddings: Understanding CLIP (Contrastive Language-Image Pre-training) and how text and images "talk" to each other.
+* Diffusion Models: The math and architecture behind tools like Midjourney, DALL-E, and Stable Diffusion.
+* Vision-Language Models (VLMs): Architectures like GPT-4o or LLaVA that can "see" and describe images.
+* Audio & Speech Generation: Modern text-to-speech (TTS) and music generation models.
+* Video Generation: The emerging frontier of temporal consistency in AI-generated video (e.g., Sora-like architectures).
+
+
+Voice AI & Speech Technology
+This course covers the fundamental concepts of speech science and the computational techniques used to analyze, recognize, and synthesize human speech. It bridges the gap between digital signal processing (DSP) and modern deep learning architectures.
+
+Core Topics:
+* Fundamentals of Sound: The physics of speech production (vocal tract), sampling theorem, and quantization.
+* Signal Representation: Short-Time Fourier Transform (STFT), Mel-Spectrograms, and Cepstral Analysis (MFCCs).
+* Automatic Speech Recognition (ASR): From Hidden Markov Models (HMMs) to modern End-to-End architectures (e.g., Connectionist Temporal Classification - CTC).
+* Speech Synthesis (TTS): How machines talk (e.g., WaveNet, Tacotron).
+* Audio Classification & Diarization: Identifying who is speaking and detecting emotions or environmental sounds.
+* Voice Biometrics: Speaker verification and anti-spoofing.
+
+
+
+Stream 2: AI Operations & Scalability
+
+MLOps (Machine Learning Operations)
+This is the cornerstone of the stream. It teaches students how to treat machine learning as a software engineering discipline, focusing on the automation of the entire model lifecycle—from data ingestion to production monitoring.
+
+Core Topics:
+* CI/CD for ML: Automated testing and deployment of models.
+* Experiment Tracking: Using tools like MLflow or Weights & Biases to manage model versions.
+* Model Serving: Deploying models via REST APIs (FastAPI/Flask) and Model Servers (TFServing/TorchServe).
+* Monitoring & Observability: Detecting "Data Drift" and "Concept Drift" in production environments.
+
+
+Cloud-Native AI & Distributed Systems
+As AI models grow (like LLMs), they no longer fit on a single computer. This course covers how to use cloud infrastructure to train and serve massive models across clusters of machines.
+
+Core Topics:
+* Containerization & Orchestration: Advanced Docker and Kubernetes (KServe/Kubeflow) for AI.
+* Distributed Training: Techniques for Data Parallelism and Model Parallelism.
+* Vector Databases: Managing high-speed retrieval for AI using Pinecone, Milvus, or Weaviate.
+* Serverless AI: Deploying "Functions-as-a-Service" for low-cost, scalable AI inference.
+
+
+AI Security, Robustness, and Reliability
+This course addresses the "Cybersecurity" of AI. Students learn how models can be hacked, how they fail, and how to build "defensive AI" that is reliable and safe for sensitive industries.
+
+Core Topics:
+* Adversarial Machine Learning: Understanding and defending against "Evasion" and "Poisoning" attacks.
+* Prompt Injection & LLM Security: Securing Generative AI applications from malicious input.
+* Privacy-Preserving AI: Techniques like Federated Learning and Differential Privacy.
+* Model Red Teaming: Stress-testing models for edge cases and safety violations.
+
+
+
+Stream 3: Autonomous & Bio-Inspired Systems
+
+Robotics and Autonomous Systems
+Introduction to the integration of AI with physical hardware to create autonomous agents.
+
+Core Topics:
+* Kinematics and Control Systems.
+* Sensing and Perception (Lidar, Sonar, IMU).
+* Path Planning and SLAM (Simultaneous Localization and Mapping).
+* Human-Robot Interaction.
+
+
+Bio-Inspired Computing 
+Covers algorithms modeled after biological processes to solve complex optimization problems.
+
+Core Topics:
+* Genetic Algorithms and Evolutionary Computing.
+* Swarm Intelligence (Ant Colony, Particle Swarm Optimization).
+* Fuzzy Logic and Soft Computing.
+* Neural Architecture Search (NAS).
+
+
+Edge AI and Embedded Systems
+Focuses on deploying AI models on resource-constrained devices like smartphones, IoT sensors, and microcontrollers.
+
+Core Topics:
+* Model Compression (Quantization, Pruning, Distillation).
+* TensorFlow Lite and ONNX Runtime.
+* Hardware Accelerators (TPUs, NPUs).
+* Low-latency Inference for Real-time Applications.
+* Hardware Constraints: Working with ARM Cortex, NVIDIA Jetson, and ESP32.
+* Model Optimization: TinyML, Pruning, and 8-bit Quantization.
+* Real-Time Operating Systems (RTOS): Introduction to ROS 2 (Robot Operating System).
+* Low-Latency Inference: Strategies for processing sensor data in milliseconds.
+
+
+Multi-Agent Robotics
+Focuses on the coordination of multiple physical agents (drones, rovers, or bots) to achieve collective goals without a central controller. This course emphasizes decentralized hardware interaction.
+
+Core Topics:
+* Boids & Flocking: Implementing separation, alignment, and cohesion in 3D airspace.
+* Ad-hoc Communication: Mesh networking and signal management between moving robots.
+* Formation Control: Grids, circles, and dynamic shape-shifting for search and rescue.
+* Decentralized Task Allocation: Cooperative foraging and "Auction-based" task sharing.
+
+
+Reinforcement Learning (RL)
+Study of agents that learn to make decisions by interacting with an environment to maximize rewards.
+
+Core Topics:
+* Markov Decision Processes (MDP).
+* Q-Learning and Deep Q-Networks (DQN).
+* Policy Gradient Methods.
+* Applications in Robotics and Game AI.
+
+
+Computer Vision
+Integrates classical digital image processing with modern deep learning to enable machines to perceive and interpret visual data. It transitions from low-level pixel manipulation and feature engineering to high-level scene understanding using convolutional and attention-based neural architectures.
+Core Topics:
+* Image Processing Foundations: Spatial and frequency domain filtering, color space transformations, and morphological operations.
+* Feature Engineering & Geometry: Classical descriptors (SIFT/ORB), edge detection, and the geometry of multiple views (Stereo and Homographies).
+* Deep Learning for Perception: Convolutional Neural Networks (CNNs), Object Detection (YOLO), and Panoptic Segmentation.
+* Sequential & Advanced Vision: Motion analysis (Optical Flow), Video Tracking, and the shift toward Vision Transformers (ViT).
+* Multimodal Integration: Bridging vision and language through architectures like CLIP and Image Captioning.
+
+
+
+
+Stream 3: Ethics, Policy, & Safety in AI
+
+AI Ethics, Policy, and Governance
+Examines the legal, ethical, and social implications of AI, focusing on fairness, accountability, and transparency.
+
+Core Topics:
+* Algorithmic Bias and Fairness Metrics.
+* AI Privacy and Data Protection Acts (GDPR).
+* The "Black Box" Problem and Explainable AI (XAI).
+* AI Safety and Alignment.
+
+
+Explainable AI (XAI) and Interpretabilty
+As AI is used in healthcare and finance, "The model said so" is no longer an acceptable answer. This course teaches how to peek inside the "Black Box."
+
+Core Topics:
+* LIME (Local Interpretable Model-agnostic Explanations) and SHAP values.
+* Feature Importance and Saliency Maps.
+* Counterfactual Explanations.
+* Designing Human-in-the-loop systems.
+
+
+AI Strategy and Digital Transformation
+Aimed at future CTOs. How do you actually implement AI in a legacy business?
+
+Core Topics:
+* AI Readiness Assessment.
+* Cost-Benefit Analysis of AI Projects.
+* Managing AI Talent and Cross-functional Teams.
+* AI Product Management and Lifecycle.
+
+

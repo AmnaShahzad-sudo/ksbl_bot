@@ -11,6 +11,10 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
+
 from rag_engine import KSBLBotEngine
 from knowledge_manager import KnowledgeManager
 
@@ -28,6 +32,10 @@ app.add_middleware(
         "https://ksbl-admin-dashboard.vercel.app", # Production frontend
         "http://localhost:3000",                  # Local dev port 3000
         "http://localhost:3001",                  # Local dev port 3001
+        "http://localhost:8000",                  # Swagger/Local API port 8000
+        "http://127.0.0.1:8000",                  # Swagger/Local API port 8000 (IP)
+        "http://localhost:8010",                  # Docker API port 8010
+        "http://127.0.0.1:8010",                  # Docker API port 8010 (IP)
         "https://dev.ksbl.pk",
         "https://www.ksbl.edu.pk"                 # Base domain (no trailing slash)
     ],
