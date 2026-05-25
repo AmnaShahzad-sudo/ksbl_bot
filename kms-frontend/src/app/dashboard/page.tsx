@@ -10,10 +10,11 @@ import {
   FileText, 
   Trash2, 
   Edit3, 
+  ExternalLink,
+  MoreVertical,
   CheckCircle2,
   Clock,
-  AlertCircle,
-  Plus
+  AlertCircle
 } from "lucide-react";
 
 const API_BASE = "https://ksbl-bot.onrender.com/v1";
@@ -98,29 +99,20 @@ export default function DashboardPage() {
   );
 
   return (
-    <div className="p-8 max-w-6xl mx-auto animate-in fade-in duration-300">
+    <div className="p-8 max-w-6xl mx-auto">
       {/* Header Area */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-[#002554] tracking-tight">Knowledge Base</h1>
+          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Knowledge Base</h1>
           <p className="text-slate-500 text-sm mt-1">Manage documents that the AI uses for context.</p>
         </div>
         
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => router.push("/dashboard/edit/new")}
-            className="flex items-center gap-2 px-4 py-2.5 bg-[#fdb913] hover:bg-[#e5a70f] text-[#002554] rounded-xl font-bold text-sm shadow-md transition-all active:scale-95"
-          >
-            <Plus className="w-4 h-4" />
-            Create New File
-          </button>
-          
-          <label className="flex items-center gap-2 px-4 py-2.5 bg-[#002554] hover:bg-[#001f46] text-white rounded-xl font-semibold text-sm cursor-pointer shadow-md transition-all active:scale-95">
+          <label className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm cursor-pointer shadow-lg shadow-blue-100 transition-all active:scale-95">
             <FilePlus className="w-4 h-4" />
             {uploading ? "Uploading..." : "Upload New File"}
             <input type="file" className="hidden" onChange={handleUpload} disabled={uploading} />
           </label>
-          
           <button 
             onClick={fetchFiles}
             className="p-2.5 text-slate-500 hover:bg-slate-100 rounded-xl transition-colors"
@@ -140,26 +132,22 @@ export default function DashboardPage() {
       )}
 
       {/* Stats/Status Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-[#002554]/10 flex items-center justify-center text-[#002554]">
-            <FileText className="w-6 h-6" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {[
+          { label: "Total Documents", value: files.length, icon: FileText, color: "blue" },
+          { label: "AI Status", value: "Active", icon: CheckCircle2, color: "green" },
+          { label: "Last Sync", value: "Just now", icon: Clock, color: "amber" },
+        ].map((stat, i) => (
+          <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div className={`w-12 h-12 rounded-xl bg-${stat.color}-50 flex items-center justify-center text-${stat.color}-600`}>
+              <stat.icon className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-slate-500">{stat.label}</p>
+              <p className="text-xl font-bold text-slate-800">{stat.value}</p>
+            </div>
           </div>
-          <div>
-            <p className="text-sm font-medium text-slate-500">Total Documents</p>
-            <p className="text-xl font-bold text-slate-800">{files.length}</p>
-          </div>
-        </div>
-
-        <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
-            <Clock className="w-6 h-6" />
-          </div>
-          <div>
-            <p className="text-sm font-medium text-slate-500">Last Sync</p>
-            <p className="text-xl font-bold text-slate-800">Just now</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Search and Table */}
@@ -170,7 +158,7 @@ export default function DashboardPage() {
             <input 
               type="text"
               placeholder="Search documents by name..."
-              className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#002554]/20 focus:border-[#002554]"
+              className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -191,7 +179,7 @@ export default function DashboardPage() {
               {loading ? (
                 <tr>
                   <td colSpan={4} className="px-6 py-12 text-center text-slate-400">
-                    <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-[#002554]" />
+                    <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2" />
                     Loading files...
                   </td>
                 </tr>
@@ -206,7 +194,7 @@ export default function DashboardPage() {
                   <tr key={file.filename} className="hover:bg-slate-50/50 transition-colors group">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-[#002554]/5 flex items-center justify-center text-[#002554]">
+                        <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
                           <FileText className="w-5 h-5" />
                         </div>
                         <span className="text-sm font-semibold text-slate-700">{file.filename}</span>
@@ -225,7 +213,7 @@ export default function DashboardPage() {
                       <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                         <button 
                           onClick={() => router.push(`/dashboard/edit/${encodeURIComponent(file.filename)}`)}
-                          className="p-2 text-slate-400 hover:text-[#002554] hover:bg-[#002554]/5 rounded-lg transition-all"
+                          className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
                           title="Edit"
                         >
                           <Edit3 className="w-4 h-4" />
